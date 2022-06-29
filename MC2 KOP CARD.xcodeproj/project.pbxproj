@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BA1D99286AD08300EA8B45 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 43BA1D98286AD08300EA8B45 /* CodeScanner */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
 		43CDB38428680B7400C07599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38328680B7400C07599 /* ContentView.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BA1D99286AD08300EA8B45 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "MC2 KOP CARD";
+			packageProductDependencies = (
+				43BA1D98286AD08300EA8B45 /* CodeScanner */,
+			);
 			productName = "MC2 KOP CARD";
 			productReference = 43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 43CDB37528680B7300C07599;
+			packageReferences = (
+				43BA1D97286AD08300EA8B45 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 43CDB37F28680B7400C07599 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,11 +278,13 @@
 				DEVELOPMENT_TEAM = C8B3R9N352;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need camera to scan QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +309,13 @@
 				DEVELOPMENT_TEAM = C8B3R9N352;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need camera to scan QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43BA1D97286AD08300EA8B45 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43BA1D98286AD08300EA8B45 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43BA1D97286AD08300EA8B45 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43CDB37628680B7300C07599 /* Project object */;
 }
