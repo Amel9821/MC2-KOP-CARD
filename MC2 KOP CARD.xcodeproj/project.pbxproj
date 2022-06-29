@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21BC4574286C696D003A2B4B /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC4573286C696C003A2B4B /* OnBoardingPage.swift */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
 		43CDB38428680B7400C07599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38328680B7400C07599 /* ContentView.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21BC4573286C696C003A2B4B /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2 KOP CARD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_KOP_CARDApp.swift; sourceTree = "<group>"; };
 		43CDB38328680B7400C07599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */,
+				21BC4573286C696C003A2B4B /* OnBoardingPage.swift */,
 				43CDB38328680B7400C07599 /* ContentView.swift */,
 				43CDB38528680B7500C07599 /* Assets.xcassets */,
 				43CDB38728680B7500C07599 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CDB38428680B7400C07599 /* ContentView.swift in Sources */,
+				21BC4574286C696D003A2B4B /* OnBoardingPage.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
