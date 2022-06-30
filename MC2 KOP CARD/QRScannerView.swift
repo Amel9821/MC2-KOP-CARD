@@ -1,15 +1,14 @@
 //
-//  ContentView.swift
+//  QRScannerView.swift
 //  MC2 KOP CARD
 //
-//  Created by Amalia . on 26/06/22.
+//  Created by Amalia . on 30/06/22.
 //
 
 import SwiftUI
 import CodeScanner
 
-struct ContentView: View {
-    
+struct QRScannerView: View {
     @State private var isPresentingScanner = false
     @State private var scannedCode: String = "Scan a QR code to get started."
     
@@ -24,8 +23,6 @@ struct ContentView: View {
             }
         )
     }
-    
-    
     var body: some View {
         VStack(spacing: 10) {
             Text(scannedCode)
@@ -37,11 +34,9 @@ struct ContentView: View {
             }
         }
     }
-
-
-struct ContentView_Previews: PreviewProvider {
+struct QRScannerView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        QRScannerView()
     }
 }
 }

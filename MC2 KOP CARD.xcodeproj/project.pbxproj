@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431E265E286D791700C15518 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E265D286D791700C15518 /* QRScannerView.swift */; };
 		43BA1D99286AD08300EA8B45 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 43BA1D98286AD08300EA8B45 /* CodeScanner */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
-		43CDB38428680B7400C07599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38328680B7400C07599 /* ContentView.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431E265D286D791700C15518 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2 KOP CARD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_KOP_CARDApp.swift; sourceTree = "<group>"; };
-		43CDB38328680B7400C07599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43CDB38528680B7500C07599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43CDB38828680B7500C07599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */,
-				43CDB38328680B7400C07599 /* ContentView.swift */,
+				431E265D286D791700C15518 /* QRScannerView.swift */,
 				43CDB38528680B7500C07599 /* Assets.xcassets */,
 				43CDB38728680B7500C07599 /* Preview Content */,
 			);
@@ -145,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43CDB38428680B7400C07599 /* ContentView.swift in Sources */,
+				431E265E286D791700C15518 /* QRScannerView.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
