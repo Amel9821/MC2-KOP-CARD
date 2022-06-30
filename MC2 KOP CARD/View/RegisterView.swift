@@ -42,13 +42,17 @@ struct RegisterView: View {
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
-            Text("Register").font(Font.system(size: 20, design: .rounded))
-                .padding()
-                .frame(width: 280, height: 50, alignment: .center)
-                .background(Color("ColorButton"))
-                .cornerRadius(10)
-                .foregroundColor(Color("ColorText"))
-                .padding()
+            NavigationLink(destination: LoginView(), label: {
+                Text("Register").font(Font.system(size: 20, design: .rounded))
+                    .padding()
+                    .frame(width: 280, height: 50, alignment: .center)
+                    .background(Color("ColorButton"))
+                    .cornerRadius(10)
+                    .foregroundColor(Color("ColorText"))
+                    .padding()
+            }
+            )
+            
         }
         
     }

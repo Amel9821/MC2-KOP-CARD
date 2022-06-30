@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E265F286D7C4300C15518 /* QRGeneratorView.swift */; };
 		43759D5F2868C20400A96F98 /* Krungthep.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43759D5E2868C20400A96F98 /* Krungthep.ttf */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431E265F286D7C4300C15518 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		43759D5E2868C20400A96F98 /* Krungthep.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Krungthep.ttf; sourceTree = "<group>"; };
 		43759D602868C53A00A96F98 /* MC2-KOP-CARD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MC2-KOP-CARD-Info.plist"; sourceTree = SOURCE_ROOT; };
 		43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2 KOP CARD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				43CDB392286812C700C07599 /* LoginView.swift */,
+				431E265F286D7C4300C15518 /* QRGeneratorView.swift */,
 				43CDB3942868132300C07599 /* RegisterView.swift */,
 			);
 			path = View;
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
+				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
 			);
