@@ -20,7 +20,7 @@ struct RegisterView: View {
                 .frame(width: 104, height: 141, alignment: .center)
             Text("KOP CARD")
                 .font(.custom("Krungthep", size: 30))
-                .foregroundColor(Color("Color"))
+                .foregroundColor(Color("ColorText"))
                 
             TextField("Name", text: $name)
                 .padding()
@@ -45,9 +45,9 @@ struct RegisterView: View {
             Text("Register").font(Font.system(size: 20, design: .rounded))
                 .padding()
                 .frame(width: 280, height: 50, alignment: .center)
-                .background(Color("Color"))
+                .background(Color("ColorButton"))
                 .cornerRadius(10)
-                .foregroundColor(.white)
+                .foregroundColor(Color("ColorText"))
                 .padding()
         }
         

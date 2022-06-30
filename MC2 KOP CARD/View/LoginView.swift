@@ -19,7 +19,7 @@ struct LoginView: View {
                     .frame(width: 104, height: 141, alignment: .center)
                 Text("KOP CARD")
                     .font(.custom("Krungthep", size: 30))
-                    .foregroundColor(Color("Color"))
+                    .foregroundColor(Color("ColorText"))
                     
                 TextField("Email", text: $email)
                     .padding()
@@ -34,15 +34,15 @@ struct LoginView: View {
                 Text("Sign in").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
-                    .background(Color("Color"))
+                    .background(Color("ColorButton"))
                     .cornerRadius(10)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("ColorText"))
                     .padding()
                 HStack {
                     Text("Don't have an account?")
                     NavigationLink(destination: RegisterView(), label: {
                         Text("Register now!")
-                            .foregroundColor(Color("Color"))
+                            .foregroundColor(.red)
                     }
                     )
                 }
