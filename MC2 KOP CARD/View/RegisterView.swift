@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
     @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
@@ -42,7 +43,7 @@ struct RegisterView: View {
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
-            NavigationLink(destination: LoginView(), label: {
+            NavigationLink(destination: LoginViewHaveAccount(), label: {
                 Text("Register").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
@@ -52,14 +53,15 @@ struct RegisterView: View {
                     .padding()
             }
             )
-            
+            }
         }
         
     }
+    
     
     struct RegisterView_Previews: PreviewProvider {
         static var previews: some View {
             RegisterView()
         }
     }
-}
+
