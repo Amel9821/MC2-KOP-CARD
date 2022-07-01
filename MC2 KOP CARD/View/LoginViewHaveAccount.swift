@@ -31,6 +31,7 @@ struct LoginViewHaveAccount: View {
                     .frame(width: 280, height: 50, alignment: .center)
                     .background(.gray.opacity(0.1))
                     .padding()
+                //if email != "" && password != ""{
                 NavigationLink(destination: QRGeneratorView(username: $username), label: {
                 Text("Sign in").font(Font.system(size: 20, design: .rounded))
                     .padding()
@@ -39,8 +40,10 @@ struct LoginViewHaveAccount: View {
                     .cornerRadius(10)
                     .foregroundColor(Color("ColorText"))
                     .padding()
+                }
+                    )
+                //}
             }
-        )
         }
     }
-}
+
