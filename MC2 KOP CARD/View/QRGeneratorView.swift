@@ -10,9 +10,7 @@ import SwiftUI
 
 struct QRGeneratorView: View {
     
-    @Binding var email: String
-    @Binding var password: String
-    @State private var text = ""
+    @Binding var username: String
         
     var body: some View {
             VStack {
@@ -20,15 +18,15 @@ struct QRGeneratorView: View {
                     .font(.title2)
                     .foregroundColor(.black)
                     .padding()
-                Image(uiImage: UIImage(data: getQRCodeDate(email: email)!)!)
+                Image(uiImage: UIImage(data: getQRCodeDate(username: username)!)!)
                     .resizable()
                     .frame(width: 300, height: 300)
             }
         }
         
-        func getQRCodeDate(email: String) -> Data? {
+        func getQRCodeDate(username: String) -> Data? {
             guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
-            let data = email.data(using: .ascii, allowLossyConversion: false)
+            let data = username.data(using: .ascii, allowLossyConversion: false)
             filter.setValue(data, forKey: "inputMessage")
             guard let ciimage = filter.outputImage else { return nil }
             let transform = CGAffineTransform(scaleX: 10, y: 10)

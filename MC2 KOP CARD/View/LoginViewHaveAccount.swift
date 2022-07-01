@@ -10,9 +10,9 @@ import SwiftUI
 struct LoginViewHaveAccount: View {
     @State var email: String = ""
     @State var password: String = ""
+    @Binding var username: String
     
     var body: some View {
-        NavigationView {
             VStack {
                 Image("GambarKartu")
                     .resizable()
@@ -31,7 +31,7 @@ struct LoginViewHaveAccount: View {
                     .frame(width: 280, height: 50, alignment: .center)
                     .background(.gray.opacity(0.1))
                     .padding()
-                NavigationLink(destination: QRGeneratorView(email: $email, password: $password), label: {
+                NavigationLink(destination: QRGeneratorView(username: $username), label: {
                 Text("Sign in").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
@@ -42,11 +42,5 @@ struct LoginViewHaveAccount: View {
             }
         )
         }
-    }
-}
-}
-struct LoginViewHaveAccount_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginViewHaveAccount()
     }
 }
