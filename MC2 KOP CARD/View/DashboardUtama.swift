@@ -22,6 +22,8 @@ import SwiftUI
 //]
 
 struct DashboardUtama: View {
+    
+    
     var body: some View {
 
         VStack{
@@ -200,13 +202,13 @@ struct Dashboard: View{
                     Image(systemName: "house")
                     Text("Home")
                 }
-                    
+
             Acara()
             .tabItem{
                             Image(systemName: "calendar")
                             Text("Events")
                         }
-                    
+
             Akun()
                 .tabItem{
                     Image(systemName: "person.fill")

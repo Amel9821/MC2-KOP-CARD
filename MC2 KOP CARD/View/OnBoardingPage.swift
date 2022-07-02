@@ -28,67 +28,71 @@ private let onBoardingSteps = [
 
 struct OnBoardingPage: View {
     @State private var currentStep = 0
+    @State private var showDashboard: Bool = false
     
     init() {
         UIScrollView.appearance().bounces = false
     }
     
     var body: some View {
-    
+        NavigationView {
         VStack{
             HStack{
-             Spacer()
-                //NavigationLink(destination: LoginView(), label: {
-               // Text("Skip")
-                    //.padding(16)
-               //     .foregroundColor(.gray)
-      //  }
-      //  )
-                Button(action: {
-                    self.currentStep = onBoardingSteps.count - 1
-                }){
+                Spacer()
+                NavigationLink(destination: DashboardUtama(), isActive: self.$showDashboard, label: {
                     Text("Skip")
+                        .onTapGesture{
+                            self.showDashboard = true
+                        }
                         .padding(16)
                         .foregroundColor(.gray)
                 }
+                )
+                //                Button(action: {
+                //                    self.currentStep = onBoardingSteps.count - 1
+                //                }){
+                //                    Text("Skip")
+                //                        .padding(16)
+                //                        .foregroundColor(.gray)
+                //                }
                 
             }
             
             TabView(selection: $currentStep){
-                ForEach(0..<onBoardingSteps.count) { it in
-        
-        VStack{
-            Image(onBoardingSteps[it].image)
-                .resizable()
-                .frame(width: 250, height: 250)
-            
-            Text(onBoardingSteps[it].title)
-                .font(.title)
-                .bold()
-            
-            Text(onBoardingSteps[it].description)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
-                .padding(.top, 16)
-            
-        }
-        .tag(it)
-                }
-    }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            HStack{
-            ForEach(0..<onBoardingSteps.count) {it in
-                if it == currentStep {
-                    Circle()
-                        .frame(width: 20, height: 10)
-                        .cornerRadius(10)
-                        .foregroundColor(CustomColor.ColorKopCard)
-                } else {
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .foregroundColor(.gray)
+                ForEach(0..<onBoardingSteps.count,id:\.self) { it in
+                    
+                    VStack{
+                        Image(onBoardingSteps[it].image)
+                            .resizable()
+                            .frame(width: 250, height: 250)
+                        
+                        Text(onBoardingSteps[it].title)
+                            .font(.title)
+                            .bold()
+                        
+                        Text(onBoardingSteps[it].description)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 32)
+                            .padding(.top, 16)
+                        
+                    }
+                    .tag(it)
                 }
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            HStack{
+                ForEach(0..<onBoardingSteps.count,id:\.self) {it in
+                    if it == currentStep {
+                        Circle()
+                            .frame(width: 20, height: 10)
+                            .cornerRadius(10)
+                            .foregroundColor(CustomColor.ColorKopCard)
+                    } else {
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(.gray)
+                    }
+                }
             }
             .padding(.bottom, 24)
             Button(action:{
@@ -97,6 +101,12 @@ struct OnBoardingPage: View {
                 } else {
                     
                 }
+                
+                if currentStep >= onBoardingSteps.count - 1 {
+                    self.showDashboard = true
+                }
+//                print(currentStep)
+//                print(onBoardingSteps.count)
                 
             }){
                 Text(currentStep < onBoardingSteps.count - 1 ? "Next" : "Get started")
@@ -108,8 +118,8 @@ struct OnBoardingPage: View {
                     .foregroundColor(.purple)
             }
             .buttonStyle(PlainButtonStyle())
-}
-}
+        }
+        }}
 }
 struct OnBoardingPage_Previews: PreviewProvider {
     static var previews: some View {

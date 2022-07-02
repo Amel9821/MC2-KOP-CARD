@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginViewHaveAccount: View {
+    
+  //  @Binding var showLoginHaveAccount: Bool
     @Binding var email: String
     @Binding var password: String
     @Binding var username: String
@@ -42,7 +44,6 @@ struct LoginViewHaveAccount: View {
                     .padding()
                 }
                     )
-                //}
             }
         }
     }
