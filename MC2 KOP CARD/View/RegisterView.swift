@@ -43,6 +43,7 @@ struct RegisterView: View {
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
+            if name != "" && email != "" && password != "" && username != "" {
             NavigationLink(destination: LoginViewHaveAccount(username: $username), label: {
                 Text("Register").font(Font.system(size: 20, design: .rounded))
                     .padding()
@@ -53,15 +54,16 @@ struct RegisterView: View {
                     .padding()
             }
             )
+            } else {
+                Text("Register").font(Font.system(size: 20, design: .rounded))
+                    .padding()
+                    .frame(width: 280, height: 50, alignment: .center)
+                    .background(Color("ColorButton"))
+                    .cornerRadius(10)
+                    .foregroundColor(Color("ColorText"))
+                    .padding()
             }
         }
         
     }
-    
-    
-    struct RegisterView_Previews: PreviewProvider {
-        static var previews: some View {
-            RegisterView()
-        }
-    }
-
+}

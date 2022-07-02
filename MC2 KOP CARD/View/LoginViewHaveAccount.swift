@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginViewHaveAccount: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @Binding var email: String
+    @Binding var password: String
     @Binding var username: String
     
     var body: some View {
@@ -31,7 +31,7 @@ struct LoginViewHaveAccount: View {
                     .frame(width: 280, height: 50, alignment: .center)
                     .background(.gray.opacity(0.1))
                     .padding()
-                //if email != "" && password != ""{
+                if email == email && password == password {
                 NavigationLink(destination: QRGeneratorView(username: $username), label: {
                 Text("Sign in").font(Font.system(size: 20, design: .rounded))
                     .padding()
@@ -46,4 +46,4 @@ struct LoginViewHaveAccount: View {
             }
         }
     }
-
+}

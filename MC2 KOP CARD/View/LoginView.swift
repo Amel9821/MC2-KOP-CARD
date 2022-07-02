@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @State var showRegisterView: Bool = false
     @State var email: String = ""
     @State var password: String = ""
     
@@ -40,13 +42,19 @@ struct LoginView: View {
                     .padding()
                 HStack {
                     Text("Don't have an account?")
-                    NavigationLink(destination: RegisterView(), label: {
+                    Button {
+                        // ketika di klik
+                        showRegisterView.toggle()
+                    } label: {
                         Text("Register now!")
                             .foregroundColor(.red)
                     }
-                    )
+                    //NavigationLink(destination: RegisterView(), label: {
+                    //    Text("Register now!").font(Font.system(size: 20, design: .rounded))
+                     //       .foregroundColor(.red)
                 }
-            }
+                }
+            .sheet(isPresented: $showReadingForm) }
         }
     }
     struct LoginView_Previews: PreviewProvider {
@@ -54,4 +62,4 @@ struct LoginView: View {
             LoginView()
         }
     }
-}
+

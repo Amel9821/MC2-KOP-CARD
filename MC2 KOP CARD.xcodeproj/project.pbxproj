@@ -11,6 +11,15 @@
 		431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */; };
 		433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F09DE286EA4BB009BDA4E /* CardView.swift */; };
 		43759D5F2868C20400A96F98 /* Krungthep.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43759D5E2868C20400A96F98 /* Krungthep.ttf */; };
+		437A9D9328703BF2006BD96F /* exchangePointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9228703BF2006BD96F /* exchangePointView.swift */; };
+		437A9D9528703C15006BD96F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9428703C15006BD96F /* Activity.swift */; };
+		437A9D9728703C1C006BD96F /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9628703C1C006BD96F /* EventView.swift */; };
+		437A9D9928703C32006BD96F /* EditKopCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9828703C32006BD96F /* EditKopCard.swift */; };
+		437A9D9B28703C38006BD96F /* idolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9A28703C38006BD96F /* idolView.swift */; };
+		437A9D9D28703C40006BD96F /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9C28703C40006BD96F /* ProfileCard.swift */; };
+		437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9E28703C47006BD96F /* ProfileCardLogin.swift */; };
+		437A9DA328704167006BD96F /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9DA228704167006BD96F /* OnBoardingPage.swift */; };
+		437A9DA928707AF0006BD96F /* DashboardUtama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9DA828707AF0006BD96F /* DashboardUtama.swift */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
@@ -24,6 +33,15 @@
 		433F09DE286EA4BB009BDA4E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		43759D5E2868C20400A96F98 /* Krungthep.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Krungthep.ttf; sourceTree = "<group>"; };
 		43759D602868C53A00A96F98 /* MC2-KOP-CARD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MC2-KOP-CARD-Info.plist"; sourceTree = SOURCE_ROOT; };
+		437A9D9228703BF2006BD96F /* exchangePointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangePointView.swift; sourceTree = "<group>"; };
+		437A9D9428703C15006BD96F /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		437A9D9628703C1C006BD96F /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		437A9D9828703C32006BD96F /* EditKopCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditKopCard.swift; sourceTree = "<group>"; };
+		437A9D9A28703C38006BD96F /* idolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idolView.swift; sourceTree = "<group>"; };
+		437A9D9C28703C40006BD96F /* ProfileCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
+		437A9D9E28703C47006BD96F /* ProfileCardLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCardLogin.swift; sourceTree = "<group>"; };
+		437A9DA228704167006BD96F /* OnBoardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		437A9DA828707AF0006BD96F /* DashboardUtama.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardUtama.swift; sourceTree = "<group>"; };
 		43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2 KOP CARD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_KOP_CARDApp.swift; sourceTree = "<group>"; };
 		43CDB38528680B7500C07599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,10 +118,19 @@
 		43CDB39028680B8800C07599 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				437A9DA228704167006BD96F /* OnBoardingPage.swift */,
 				43CDB392286812C700C07599 /* LoginView.swift */,
+				437A9DA828707AF0006BD96F /* DashboardUtama.swift */,
 				431E265F286D7C4300C15518 /* QRGeneratorView.swift */,
 				43CDB3942868132300C07599 /* RegisterView.swift */,
 				431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */,
+				437A9D9228703BF2006BD96F /* exchangePointView.swift */,
+				437A9D9828703C32006BD96F /* EditKopCard.swift */,
+				437A9D9428703C15006BD96F /* Activity.swift */,
+				437A9D9E28703C47006BD96F /* ProfileCardLogin.swift */,
+				437A9D9C28703C40006BD96F /* ProfileCard.swift */,
+				437A9D9A28703C38006BD96F /* idolView.swift */,
+				437A9D9628703C1C006BD96F /* EventView.swift */,
 				433F09DE286EA4BB009BDA4E /* CardView.swift */,
 			);
 			path = View;
@@ -189,10 +216,19 @@
 			files = (
 				431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
+				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
 				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,
+				437A9D9728703C1C006BD96F /* EventView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
 				433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
+				437A9D9528703C15006BD96F /* Activity.swift in Sources */,
+				437A9D9B28703C38006BD96F /* idolView.swift in Sources */,
+				437A9D9928703C32006BD96F /* EditKopCard.swift in Sources */,
+				437A9D9328703BF2006BD96F /* exchangePointView.swift in Sources */,
+				437A9DA328704167006BD96F /* OnBoardingPage.swift in Sources */,
+				437A9D9D28703C40006BD96F /* ProfileCard.swift in Sources */,
+				437A9DA928707AF0006BD96F /* DashboardUtama.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

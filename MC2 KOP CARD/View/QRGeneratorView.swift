@@ -21,6 +21,7 @@ struct QRGeneratorView: View {
                 Image(uiImage: UIImage(data: getQRCodeDate(username: username)!)!)
                     .resizable()
                     .frame(width: 300, height: 300)
+                    .padding()
             }
         }
         
