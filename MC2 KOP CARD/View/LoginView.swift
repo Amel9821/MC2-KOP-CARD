@@ -22,7 +22,7 @@ struct LoginView: View {
                 Text("KOP CARD")
                     .font(.custom("Krungthep", size: 30))
                     .foregroundColor(Color("ColorText"))
-                    
+                
                 TextField("Email", text: $email)
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
@@ -51,10 +51,11 @@ struct LoginView: View {
                     }
                     //NavigationLink(destination: RegisterView(), label: {
                     //    Text("Register now!").font(Font.system(size: 20, design: .rounded))
-                     //       .foregroundColor(.red)
+                    //       .foregroundColor(.red)
                 }
-                }
-            .sheet(isPresented: $showReadingForm) }
+            }
+        }.sheet(isPresented: $showRegisterView) {
+            RegisterView(showRegisterView: $showRegisterView)
         }
     }
     struct LoginView_Previews: PreviewProvider {
@@ -62,4 +63,4 @@ struct LoginView: View {
             LoginView()
         }
     }
-
+}

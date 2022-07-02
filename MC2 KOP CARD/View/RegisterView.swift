@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    @Binding var showRegisterView: Bool
     @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
@@ -22,7 +23,7 @@ struct RegisterView: View {
             Text("KOP CARD")
                 .font(.custom("Krungthep", size: 30))
                 .foregroundColor(Color("ColorText"))
-                
+            
             TextField("Name", text: $name)
                 .padding()
                 .frame(width: 280, height: 50, alignment: .center)
@@ -44,16 +45,16 @@ struct RegisterView: View {
                 .background(.gray.opacity(0.1))
                 .padding()
             if name != "" && email != "" && password != "" && username != "" {
-            NavigationLink(destination: LoginViewHaveAccount(username: $username), label: {
-                Text("Register").font(Font.system(size: 20, design: .rounded))
-                    .padding()
-                    .frame(width: 280, height: 50, alignment: .center)
-                    .background(Color("ColorButton"))
-                    .cornerRadius(10)
-                    .foregroundColor(Color("ColorText"))
-                    .padding()
-            }
-            )
+                NavigationLink(destination: LoginViewHaveAccount(email: $username, password: $email, username: $password), label: {
+                    Text("Register").font(Font.system(size: 20, design: .rounded))
+                        .padding()
+                        .frame(width: 280, height: 50, alignment: .center)
+                        .background(Color("ColorButton"))
+                        .cornerRadius(10)
+                        .foregroundColor(Color("ColorText"))
+                        .padding()
+                }
+                )
             } else {
                 Text("Register").font(Font.system(size: 20, design: .rounded))
                     .padding()
@@ -65,5 +66,5 @@ struct RegisterView: View {
             }
         }
         
-    }
+        }
 }
