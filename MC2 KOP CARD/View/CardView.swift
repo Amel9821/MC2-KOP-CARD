@@ -37,6 +37,8 @@ struct CardView: View {
             Text("2,000 Points")
                 .offset(x: 115, y:-310)
                 .foregroundColor(.white)
+            
+            
         }
     }
 }
