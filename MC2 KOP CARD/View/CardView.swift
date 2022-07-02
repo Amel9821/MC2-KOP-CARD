@@ -39,15 +39,6 @@ struct CardView: View {
                 .foregroundColor(.white)
             
             
-            Text("KOPI CHUSEYO")
-                .font(.custom("Krungthep", size: 18))
-                .foregroundColor(.white)
-                .offset(x: 120, y: -340)
-            Text("2,000 Points")
-                .offset(x: 115, y:-310)
-                .foregroundColor(.white)
-            
-            
         }
     }
 }
