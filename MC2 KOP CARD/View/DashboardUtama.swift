@@ -175,15 +175,16 @@ struct DashboardUtama: View {
                             
                             Text("""
                             NCT 127 Comeback
-                            4 June 2022
+                                  4 June 2022
                             Coffe Shop Menteng
                             """).offset(x: 12, y: 55)
                                 .font(.system(size: 10).bold())
                             Image("NCTback")
                                 .resizable()
-                                .frame(width: 100, height: 90)
+                                .frame(width: 118, height: 98)
                                 .offset(x: 12, y: -12)
                                 .padding()
+                                
                             
                             
                         }

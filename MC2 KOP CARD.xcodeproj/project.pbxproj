@@ -34,6 +34,7 @@
 		43E436282871DB6200DF1618 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436272871DB6200DF1618 /* ProfileImageMod.swift */; };
 		43E4362A2871FA0100DF1618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436292871FA0100DF1618 /* ContentView.swift */; };
 		43E4362C28720C6700DF1618 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4362B28720C6700DF1618 /* ContentView2.swift */; };
+		43E4362E2872287600DF1618 /* TopPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4362D2872287600DF1618 /* TopPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		43E436272871DB6200DF1618 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
 		43E436292871FA0100DF1618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43E4362B28720C6700DF1618 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		43E4362D2872287600DF1618 /* TopPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +157,10 @@
 				43E436252871DB2300DF1618 /* CameraView.swift */,
 				43E436272871DB6200DF1618 /* ProfileImageMod.swift */,
 				437A9DB5287156F0006BD96F /* QRCodeScanner.swift */,
-				5F0ECA132871D5A000E7189F /* TopPoints.swift */,
 				437A9DB72871A967006BD96F /* Launch Screen.storyboard */,
 				43E436292871FA0100DF1618 /* ContentView.swift */,
 				43E4362B28720C6700DF1618 /* ContentView2.swift */,
+				43E4362D2872287600DF1618 /* TopPoints.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,12 +255,12 @@
 				43E4362A2871FA0100DF1618 /* ContentView.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
 				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
-				5F0ECA142871D5A000E7189F /* TopPoints.swift in Sources */,
 				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,
 				437A9D9728703C1C006BD96F /* EventView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
 				437A9DAF287154C9006BD96F /* EditKopCard.swift in Sources */,
 				43E436242871DAE800DF1618 /* PreviewPicker.swift in Sources */,
+				43E4362E2872287600DF1618 /* TopPoints.swift in Sources */,
 				433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */,
 				437A9DAD2871511F006BD96F /* DashboardAfterLogin.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
