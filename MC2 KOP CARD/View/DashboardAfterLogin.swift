@@ -8,6 +8,9 @@ import SwiftUI
 
 struct DashboardAfterLogin: View {
     
+    @State var showQRCode: Bool = false
+    @State var showQRScan: Bool = false
+    @State var showActivity: Bool = false
     @Binding var username: String
     var body: some View {
 
@@ -33,11 +36,14 @@ struct DashboardAfterLogin: View {
 
                 Spacer(minLength: 0)
 
-                Button(action: {}){
-                Image(systemName: "person.2.wave.2.fill")
+                Button {
+                    showActivity.toggle()
+                } label: {
+                    Image(systemName: "person.2.wave.2.fill")
                         .resizable()
                         .frame(width: 40, height: 25)
                         .foregroundColor(WarnaAfter.myColorAfter)
+                        .padding(.trailing,30)
                 }.padding(.trailing,30).offset(y: 15)
 
 
@@ -63,8 +69,18 @@ struct DashboardAfterLogin: View {
                 
                                     .foregroundColor(Color.white)
                 
-                
-                                Button(action: {}){
+//                Button {
+//                    showActivity.toggle()
+//                } label: {
+//                    Image(systemName: "person.2.wave.2.fill")
+//                        .resizable()
+//                        .frame(width: 40, height: 25)
+//                        .foregroundColor(WarnaAfter.myColorAfter)
+//                        .padding(.trailing,30)
+//                }
+                Button {
+                    showQRScan.toggle()
+                } label: {
                 
                                     HStack{
                                     Image(systemName: "qrcode.viewfinder")
@@ -81,7 +97,9 @@ struct DashboardAfterLogin: View {
                                 }.offset( y: 35)
                 
                 
-                                Button(action: {}){
+                                Button {
+                                    showQRCode.toggle()
+                                } label: {
                 
                                     HStack{
                                     Image(systemName: "qrcode.viewfinder")
@@ -185,6 +203,12 @@ struct DashboardAfterLogin: View {
 //                .foregroundColor(CustomColor.myColor2)
         }
         
+        .sheet(isPresented: $showActivity) {
+            Activity(showActivity: $showActivity)}
+        .sheet(isPresented: $showQRScan) {
+            QRCodeScanner(showQRScan: $showQRScan)}
+        .sheet(isPresented: $showQRCode) {
+            QRGeneratorView(showQRCode: $showQRCode, username: $username)}
         .background(WarnaAfter.myColor2After)
         
 

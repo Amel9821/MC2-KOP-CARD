@@ -10,6 +10,7 @@ import SwiftUI
 
 struct QRGeneratorView: View {
     
+    @Binding var showQRCode: Bool
     @Binding var username: String
     
     var body: some View {

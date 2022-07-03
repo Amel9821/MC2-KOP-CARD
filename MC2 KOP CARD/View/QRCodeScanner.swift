@@ -9,6 +9,8 @@ import SwiftUI
 import CodeScanner
 
 struct QRCodeScanner: View {
+    
+    @Binding var showQRScan: Bool
     @State private var isPresentingScanner = false
     @State private var scannedCode: String = "Scan a QR code to get started."
     
@@ -34,10 +36,10 @@ struct QRCodeScanner: View {
             }
         }
     }
-struct QRCodeScanner_Previews: PreviewProvider {
-    static var previews: some View {
-        QRCodeScanner()
-    }
-}
+//struct QRCodeScanner_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QRCodeScanner()
+//    }
+//}
 }
 
