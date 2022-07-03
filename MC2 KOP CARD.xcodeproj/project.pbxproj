@@ -29,6 +29,7 @@
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
 		43CDB393286812C700C07599 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB392286812C700C07599 /* LoginView.swift */; };
 		43CDB3952868132300C07599 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB3942868132300C07599 /* RegisterView.swift */; };
+		5F0ECA142871D5A000E7189F /* TopPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0ECA132871D5A000E7189F /* TopPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		43CDB38828680B7500C07599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43CDB392286812C700C07599 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		43CDB3942868132300C07599 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5F0ECA132871D5A000E7189F /* TopPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				433F09DE286EA4BB009BDA4E /* CardView.swift */,
 				437A9DAE287154C9006BD96F /* EditKopCard.swift */,
 				437A9DB5287156F0006BD96F /* QRCodeScanner.swift */,
+				5F0ECA132871D5A000E7189F /* TopPoints.swift */,
 				437A9DB72871A967006BD96F /* Launch Screen.storyboard */,
 			);
 			path = View;
@@ -236,6 +239,7 @@
 				431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
 				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
+				5F0ECA142871D5A000E7189F /* TopPoints.swift in Sources */,
 				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,
 				437A9D9728703C1C006BD96F /* EventView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
