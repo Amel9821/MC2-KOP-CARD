@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventView: View {
+    @State var searchQuery: String = ""
     var body: some View {
         ScrollView {
             VStack {
@@ -43,6 +44,7 @@ struct EventView: View {
                     }
                 }
             }
+            .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
         }
     }
 }
