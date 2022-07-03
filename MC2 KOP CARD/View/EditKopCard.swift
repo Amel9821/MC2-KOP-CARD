@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditKopCard: View {
     
+    @Binding var showEditKopCard: Bool
     @State private var Name : String = "Pieter"
     @State private var Username : String = "PieterNCT"
     @State private var Bio : String = "Suka-suka kamu, aku sukanya Nayeon cantik"
@@ -88,9 +89,10 @@ struct EditKopCard: View {
     }
 }
 struct EditKopCard_Previews: PreviewProvider {
+    @State static var showEditKopCard: Bool = false
     static var previews: some View {
         Group {
-            EditKopCard()
+            EditKopCard(showEditKopCard: $showEditKopCard)
                 .previewInterfaceOrientation(.portrait)
             //            ContentView()
         }

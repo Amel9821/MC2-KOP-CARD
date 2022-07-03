@@ -18,9 +18,9 @@ struct DashboardAfterLogin: View {
         VStack{
 
             HStack{
-                Image("blankspace")
+                Image(systemName: "person")
                                        .resizable()
-                                       .frame(width: 60, height: 60)
+                                       .frame(width: 30, height: 30)
                                        .padding(.leading,30)
                                       .offset(y: 15)
                
@@ -136,29 +136,29 @@ struct DashboardAfterLogin: View {
 
                 }.offset(x: 110, y: -85)
 
-                Image("blankspace")
+                Image("chanyeol")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .offset(x: -110, y: -25)
 
-                Text("aecute")
+                Text("Chacaa")
                     .font(.system(size: 20)).bold()
-                    .offset(x: -30, y: -35)
+                    .offset(x: -28, y: -35)
 
                 Text("3000 Points")
                     .font(.system(size: 15))
                     .offset(x: -20, y: -15)
 
-                Image("blankspace")
+                Image("renjun")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .offset(x: -110, y: 70)
 
-                Text("meow")
+                Text("Rerere")
                     .font(.system(size: 20)).bold()
                     .offset(x: -30, y: 60)
 
-                Text("2000 Points")
+                Text("2800 Points")
                     .font(.system(size: 15))
                     .offset(x: -20, y: 80)
             }
@@ -188,10 +188,16 @@ struct DashboardAfterLogin: View {
                             .offset(y: 10)
                             
                             Text("""
-                            NEO LINK 2022
-                            2 July 2022
-                            """).offset(y: 55)
-                                .font(.system(size: 12).bold())
+                            NCT 127 Comeback
+                            4 June 2022
+                            Coffe Shop Menteng
+                            """).offset(x: 12, y: 55)
+                                .font(.system(size: 10).bold())
+                            Image("NCTback")
+                                .resizable()
+                                .frame(width: 100, height: 90)
+                                .offset(x: 12, y: -12)
+                                .padding()
                               
                         }
                     }
@@ -222,13 +228,14 @@ struct DashboardAfterLogin: View {
 
 struct AcaraAfter: View{
     var body: some View{
-       Text("")
+       EventView()
     }
 }
 
 struct AkunAfter: View{
+    @Binding var username: String
     var body: some View{
-       Text("")
+        ProfileCard(username: $username)
     }
 }
 
@@ -251,7 +258,7 @@ struct DashboardAfter: View{
                             Text("Events")
                         }
                     
-            AkunAfter()
+            AkunAfter(username: $username)
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -267,9 +274,12 @@ struct WarnaAfter {
 }
 
 
-//struct DashboardAfterLogin_Previews: PreviewProvider {
-//        static var previews: some View {
-//            DashboardAfter()
-//        }
-//    }
+struct DashboardAfterLogin_Previews: PreviewProvider {
+    
+    @State static var username: String = ""
+    @State static var showDashboardAfterLogin: Bool = false
+        static var previews: some View {
+            DashboardAfter(username: $username, showDashboardAfterLogin: $showDashboardAfterLogin)
+        }
+    }
 

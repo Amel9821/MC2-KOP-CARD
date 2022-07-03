@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct exchangePointView: View {
+    @Binding var showExchangePoint: Bool
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -135,7 +137,8 @@ struct exchangePointView: View {
 }
 
 struct exchangePointView_Previews: PreviewProvider {
+    @State static var showExchangePoint: Bool = false
     static var previews: some View {
-        exchangePointView()
+        exchangePointView(showExchangePoint: $showExchangePoint)
     }
 }

@@ -11,6 +11,7 @@ struct EventView: View {
     var body: some View {
         ScrollView {
             VStack {
+                
                 ForEach(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
                     ZStack{
                         Image("theboyz")
@@ -21,19 +22,22 @@ struct EventView: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(.black)
-                                .frame(width: 357, height: 171)
+                                .frame(width: 357, height: 220)
                                 .opacity(0.1)
+                            Image("NCTback")
+                                .resizable()
+                                .frame(width: 357, height: 220, alignment: .center)
                             Text(
     """
-    THE BOYZ WORLD TOUR: THE B-ZONE
-    July 9, 2022
-    Tennis Indoor Stadium Senayan
+    NCT 127 Comeback
+    4 June 2022
+    Coffe Shop Menteng
     """
                             )
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
-                            .frame(height: 250, alignment: .bottom)
+                            .frame(height: 200, alignment: .bottom)
                         }
                         
                     }

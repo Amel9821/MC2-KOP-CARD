@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ProfileCard: View {
     
-    //check out conditional to switch button colors, pake if else atau func case case?
+    @Binding var username: String
+    @State var showidolView: Bool = false
+    @State var showExchangePoint: Bool  = false
+    @State var showEditKopCard: Bool = false
     
     var body: some View {
         NavigationView{
@@ -19,12 +22,15 @@ struct ProfileCard: View {
                 ScrollView{
                     VStack{
                         ZStack{
+                            Button {
+                                showEditKopCard.toggle()
+                            } label: {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(
                                     LinearGradient(gradient: Gradient(colors: [Color("DPurple"), Color("GPurple")]),
                                                    startPoint: .bottom,
                                                    endPoint: .center))
-                                .frame(width: 358, height: 233)
+                                .frame(width: 358, height: 233)}
                             VStack(alignment: .leading){
                                 HStack{
                                     Image("ProfileI")
@@ -36,7 +42,7 @@ struct ProfileCard: View {
                                         Text("KOP Card")
                                             .font(Font.custom("Krungthep", size: 18))
                                             .foregroundColor(.white)
-                                        Text("2,000 Points")
+                                        Text("150 Points")
                                             .foregroundColor(.white)
                                         Spacer()
                                             .frame(height: 25)
@@ -44,13 +50,13 @@ struct ProfileCard: View {
                                 }
                                 Spacer()
                                     .frame(height: 30)
-                                Text("PieterNCT")
+                                Text(username)
                                     .foregroundColor(.white)
                                     .font(.system(size: 24, weight: .bold, design: .default))
                                 Spacer()
                                     .frame(height: 5)
-                                Text("Suka-suka kamu, aku sukanya bujang NCT")
-                                    .foregroundColor(.white)
+//                                Text("Suka-suka kamu, aku sukanya bujang NCT")
+//                                    .foregroundColor(.white)
                                 Spacer()
                                     .frame(height: 40)
                             }
@@ -135,94 +141,97 @@ struct ProfileCard: View {
                                 }
                             }
                         }
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color.white)
-                                .frame(width: 358, height: 215)
-                            VStack(alignment: .leading){
-                                Text("Social Media")
-                                    .font(.system(size: 25, weight: .bold, design: .default))
-                                ZStack{
-                                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                        .stroke(Color("Ctwitter"), lineWidth: 1)
-                                        .frame(width: 302, height: 34)
-                                    HStack{
-                                        Image("twitter")
-                                            .resizable()
-                                            .frame(width: 21, height: 21)
-                                        Text("username")
-                                    }
-                                }
-                                Spacer()
-                                    .frame(height: 15)
-                                HStack{
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                            .stroke(Color("Ckakao"), lineWidth: 1)
-                                            .frame(width: 141, height: 34)
-                                        HStack{
-                                            Image("kakao")
-                                                .resizable()
-                                                .frame(width: 21, height: 21)
-                                            Text("username")
-                                        }
-                                    }
-                                    Spacer()
-                                        .frame(width: 21)
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                            .stroke(Color("Cig"), lineWidth: 1)
-                                            .frame(width: 141, height: 34)
-                                        HStack{
-                                            Image("ig")
-                                                .resizable()
-                                                .frame(width: 21, height: 21)
-                                            Text("username")
-                                        }
-                                    }
-                                }
-                                Spacer()
-                                    .frame(height: 15)
-                                HStack{
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                            .stroke(Color("Cline"), lineWidth: 1)
-                                            .frame(width: 141, height: 34)
-                                        HStack{
-                                            Image("line")
-                                                .resizable()
-                                                .frame(width: 21, height: 21)
-                                            Text("username")
-                                        }
-                                    }
-                                    Spacer()
-                                        .frame(width: 21)
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                            .stroke(Color("Ctelegram"), lineWidth: 1)
-                                            .frame(width: 141, height: 34)
-                                        HStack{
-                                            Image("telegram")
-                                                .resizable()
-                                                .frame(width: 21, height: 21)
-                                            Text("username")
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        Spacer()
-                            .frame(height: 20)
+//                        ZStack{
+//                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                .fill(Color.white)
+//                                .frame(width: 358, height: 215)
+//                            VStack(alignment: .leading){
+//                                Text("Social Media")
+//                                    .font(.system(size: 25, weight: .bold, design: .default))
+//                                ZStack{
+//                                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                        .stroke(Color("Ctwitter"), lineWidth: 1)
+//                                        .frame(width: 302, height: 34)
+//                                    HStack{
+//                                        Image("twitter")
+//                                            .resizable()
+//                                            .frame(width: 21, height: 21)
+//                                        Text("username")
+//                                    }
+//                                }
+//                                Spacer()
+//                                    .frame(height: 15)
+//                                HStack{
+//                                    ZStack{
+//                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                            .stroke(Color("Ckakao"), lineWidth: 1)
+//                                            .frame(width: 141, height: 34)
+//                                        HStack{
+//                                            Image("kakao")
+//                                                .resizable()
+//                                                .frame(width: 21, height: 21)
+//                                            Text("username")
+//                                        }
+//                                    }
+//                                    Spacer()
+//                                        .frame(width: 21)
+//                                    ZStack{
+//                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                            .stroke(Color("Cig"), lineWidth: 1)
+//                                            .frame(width: 141, height: 34)
+//                                        HStack{
+//                                            Image("ig")
+//                                                .resizable()
+//                                                .frame(width: 21, height: 21)
+//                                            Text("username")
+//                                        }
+//                                    }
+//                                }
+//                                Spacer()
+//                                    .frame(height: 15)
+//                                HStack{
+//                                    ZStack{
+//                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                            .stroke(Color("Cline"), lineWidth: 1)
+//                                            .frame(width: 141, height: 34)
+//                                        HStack{
+//                                            Image("line")
+//                                                .resizable()
+//                                                .frame(width: 21, height: 21)
+//                                            Text("username")
+//                                        }
+//                                    }
+//                                    Spacer()
+//                                        .frame(width: 21)
+//                                    ZStack{
+//                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+//                                            .stroke(Color("Ctelegram"), lineWidth: 1)
+//                                            .frame(width: 141, height: 34)
+//                                        HStack{
+//                                            Image("telegram")
+//                                                .resizable()
+//                                                .frame(width: 21, height: 21)
+//                                            Text("username")
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        Spacer()
+//                            .frame(height: 20)
                         HStack{
                             Text("Idol")
                                 .font(.system(size: 25, weight: .bold, design: .default))
                             Spacer()
                                 .frame(width: 280)
-                            Button(action: {}, label: {
+                            Button{
+                                showidolView.toggle()
+                            }
+                        label: {
                                 Image(systemName: "plus")
                                     .font(.system(size: 25))
                                     .foregroundColor(Color("DPurple"))
-                            })
+                            }
                         }
                         ScrollView(.horizontal) {
                             HStack(spacing: 20){
@@ -233,6 +242,10 @@ struct ProfileCard: View {
                                         .frame(width: 152, height: 163)
                                         .shadow(color: .gray
                                                 , radius: 1, x: 2, y: 0)
+                                    Image("nctdream")
+                                        .resizable()
+                                        .frame(width: 150, height: 160, alignment: .top)
+                                        .cornerRadius(25)
                                     Text("**NCT DREAM**")
                                         .font(.system(size: 14))
                                         .frame(width: 152, height: 65)
@@ -240,14 +253,24 @@ struct ProfileCard: View {
                                         .cornerRadius(21)
                                         .offset(y: 49)
                                         .foregroundColor(.black)
+                                    
                                 }
                             }
                         }
                     }
                 }
             }
+            .sheet(isPresented: $showEditKopCard) {
+                EditKopCard(showEditKopCard: $showEditKopCard)}
+            .sheet(isPresented: $showExchangePoint) {
+                exchangePointView(showExchangePoint: $showExchangePoint)}
+            .sheet(isPresented: $showidolView) {
+                idolView(showidolView: $showidolView)}
             .toolbar {
-                Button(action: {}, label: {Image("pointPurple")})
+                Button{
+                    showExchangePoint.toggle()
+                } label: {
+                    Image("pointPurple")}
                 
                 
                 //                    Custom color and font
@@ -260,7 +283,8 @@ struct ProfileCard: View {
 
 
 struct ProfileCard_Previews: PreviewProvider {
+    @State static var username: String = ""
     static var previews: some View {
-        ProfileCard()
+        ProfileCard(username: $username)
     }
 }

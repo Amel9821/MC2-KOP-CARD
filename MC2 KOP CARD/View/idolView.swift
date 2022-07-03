@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct idolView: View {
+    @Binding var showidolView: Bool
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -120,7 +122,8 @@ struct idolView: View {
 }
 
 struct idolView_Previews: PreviewProvider {
+    @State static var showidolView: Bool = false
     static var previews: some View {
-        idolView()
+        idolView(showidolView: $showidolView)
     }
 }
