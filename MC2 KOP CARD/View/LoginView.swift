@@ -9,9 +9,12 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @Binding var showLogin: Bool
     @State var showRegisterView: Bool = false
     @State var email: String = ""
     @State var password: String = ""
+//    @Binding var email: String
+//    @Binding var password: String
     
     var body: some View {
         NavigationView {
@@ -58,9 +61,10 @@ struct LoginView: View {
             RegisterView(showRegisterView: $showRegisterView)
         }
     }
-    struct LoginView_Previews: PreviewProvider {
-        static var previews: some View {
-            LoginView()
-        }
-    }
 }
+//    struct LoginView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            LoginView()
+//        }
+//    }
+//}

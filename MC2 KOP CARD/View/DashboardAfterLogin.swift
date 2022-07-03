@@ -1,5 +1,4 @@
-//
-//  DashboardUtama.swift
+//  DashboardAfterLogin.swift
 //  KOP CARD
 //
 //  Created by Brenda Nathania Passandaran on 01/07/22.
@@ -7,63 +6,42 @@
 
 import SwiftUI
 
-//struct OnBoardingStep {
-//    var image: String
-//    let title: String
-//    let description: String
-//}
-//
-//private let onBoardingSteps = [
-//    OnBoardingStep(image: "Image1", title: "Fancard", description: "Create your fancard!"),
-//    OnBoardingStep(image: "Image2", title: "Connect", description: "Get connected with other Kpop fans when attending Kpop events!"),
-//    OnBoardingStep(image: "Image3", title: "Scan QR code", description: "Scan QR code to connect with Kpop fans!"),
-//    OnBoardingStep(image: "Image4", title: "Points", description: "Get your points to improve your fancard!"),
-//    OnBoardingStep(image: "Image5", title: "Community", description: "Increase your experience when attend Kpop events!"),
-//]
-
-struct DashboardUtama: View {
+struct DashboardAfterLogin: View {
     
-    @State private var showActivity: Bool = false
-    @State private var showLogin: Bool = false
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
+    @Binding var username: String
     var body: some View {
 
         VStack{
 
             HStack{
-
-                Image("KOPCARDTITLE")
-                    .resizable()
-                    .frame(width: 170, height: 25)
-                    .padding(.leading,30)
+                Image("blankspace")
+                                       .resizable()
+                                       .frame(width: 60, height: 60)
+                                       .padding(.leading,30)
+                                      .offset(y: 15)
+               
+                                                   VStack{
+                                                   Text(username)
+                                                           .font(.system(size: 20)).bold()
+                                                           .offset(x: -13, y:12)
+               
+                                                   Text("150 Points")
+                                                           .font(.system(size: 15))
+                                                           .offset(y: 15)
+                               }
 
 
                 Spacer(minLength: 0)
-                
-                Button {
-                    showActivity.toggle()
-                } label: {
-                    Image(systemName: "person.2.wave.2.fill")
+
+                Button(action: {}){
+                Image(systemName: "person.2.wave.2.fill")
                         .resizable()
                         .frame(width: 40, height: 25)
-                        .foregroundColor(Warna.myColor)
-                        .padding(.trailing,30)
-                }
-                
-//                NavigationLink(destination: Activity(), isActive: self.$showActivity,
-//                               label: {
-//                Image(systemName: "person.2.wave.2.fill")
-//                        .resizable()
-//                        .frame(width: 40, height: 25)
-//                        .foregroundColor(Warna.myColor)
-//                        .padding(.trailing,30)
-//                        .onTapGesture{self.showActivity = true}
-//                }
-//                )
+                        .foregroundColor(WarnaAfter.myColorAfter)
+                }.padding(.trailing,30).offset(y: 15)
 
-            }.padding(.top,40)
+
+            }.padding(.top, 5)
 
             ZStack{
             RoundedRectangle(cornerRadius: 10)
@@ -75,30 +53,51 @@ struct DashboardUtama: View {
                Image("cewek")
                     .resizable()
                     .frame(width: 90, height: 110)
-                    .offset(x: -105, y: 15)
+                    .offset(x: -105, y: 18)
 
-                Image("cowok")
-                     .resizable()
-                     .frame(width: 90, height: 110)
-                     .offset(x: 105, y: 15)
-
-                Text("Scan and connect!")
-                    .foregroundColor(Color.white)
-                    //.font(Font.custom("Krungthep", size: 18))
-                    .offset(y: -10)
-            
-
-                Button{
-                    showLogin.toggle()
-                } label: {
-                    Text("Login")
-                        .font(.headline)
-                        .foregroundColor(Color("Color1B"))
-                            .frame(width: 85, height: 40)
-                            .background(Color("ColorAbu"))
-                            .cornerRadius(10)
-                }.offset( y: 35)
-
+                Text("""
+                        Scan QR code of your
+                        friends at the event!
+                        """).offset(x: 50,y: -15)
+                    .font(.system(size: 18))
+                
+                                    .foregroundColor(Color.white)
+                
+                
+                                Button(action: {}){
+                
+                                    HStack{
+                                    Image(systemName: "qrcode.viewfinder")
+                
+                
+                                    Text("Scan")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(Color("Color1B"))
+                                        .frame(width: 85, height: 40)
+                                        .background(Color("ColorAbu"))
+                                        .cornerRadius(10)
+                
+                                }.offset( y: 35)
+                
+                
+                                Button(action: {}){
+                
+                                    HStack{
+                                    Image(systemName: "qrcode.viewfinder")
+                
+                
+                                    Text("Show")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(Color("Color1B"))
+                                        .frame(width: 85, height: 40)
+                                        .background(Color("ColorAbu"))
+                                        .cornerRadius(10)
+                                    //logo shownya lom diganti
+                
+                                }.offset(x: 100,y: 35)
+                
             }
 
             ZStack{
@@ -136,11 +135,11 @@ struct DashboardUtama: View {
                     .frame(width: 50, height: 50)
                     .offset(x: -110, y: 70)
 
-                Text("aecute")
+                Text("meow")
                     .font(.system(size: 20)).bold()
                     .offset(x: -30, y: 60)
 
-                Text("3000 Points")
+                Text("2000 Points")
                     .font(.system(size: 15))
                     .offset(x: -20, y: 80)
             }
@@ -186,12 +185,7 @@ struct DashboardUtama: View {
 //                .foregroundColor(CustomColor.myColor2)
         }
         
-        .background(Warna.myColor2)
-        .sheet(isPresented: $showActivity) {
-            Activity(showActivity: $showActivity)}
-        .sheet(isPresented: $showLogin) {
-            LoginView(showLogin: $showLogin)
-        }
+        .background(WarnaAfter.myColor2After)
         
 
         
@@ -201,42 +195,37 @@ struct DashboardUtama: View {
 
 
 
-struct Acara: View{
+struct AcaraAfter: View{
     var body: some View{
        Text("")
     }
 }
 
-struct Akun: View{
+struct AkunAfter: View{
     var body: some View{
        Text("")
     }
 }
 
-struct Warna {
-    static let myColor = Color("Color1B")
-    static let myColor2 = Color("Color3B")
-}
-
-struct Dashboard: View{
-   // @State private var showEvent: Bool = false
+struct DashboardAfter: View{
+    
+    @Binding var username: String
+    
     var body: some View{
         TabView{
-            DashboardUtama()
+            DashboardAfterLogin(username: $username)
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
                 }
-
-            Acara()
-//            NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
+                    
+            AcaraAfter()
             .tabItem{
-
                             Image(systemName: "calendar")
                             Text("Events")
                         }
-
-            Akun()
+                    
+            AkunAfter()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -246,12 +235,15 @@ struct Dashboard: View{
     }
 
 
+struct WarnaAfter {
+    static let myColorAfter = Color("Color1B")
+    static let myColor2After = Color("Color3B")
+}
 
 
-
-struct DashboardUtama_Previews: PreviewProvider {
-        static var previews: some View {
-            Dashboard()
-        }
-    }
+//struct DashboardAfterLogin_Previews: PreviewProvider {
+//        static var previews: some View {
+//            DashboardAfter()
+//        }
+//    }
 

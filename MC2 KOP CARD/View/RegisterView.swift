@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RegisterView: View {
     
- //   @State var showLoginHaveAccount : Bool = false
+    //   @State var showLoginHaveAccount : Bool = false
+    @State var showLoginHaveAccount: Bool = false
     @Binding var showRegisterView: Bool
     @State var name: String = ""
     @State var email: String = ""
@@ -17,6 +18,7 @@ struct RegisterView: View {
     @State var username: String = ""
     
     var body: some View {
+        NavigationView{
         VStack {
             Image("GambarKartu")
                 .resizable()
@@ -46,7 +48,7 @@ struct RegisterView: View {
                 .background(.gray.opacity(0.1))
                 .padding()
             if name != "" && email != "" && password != "" && username != "" {
-                NavigationLink(destination: LoginViewHaveAccount(email: $email, password: $password, username: $username), label: {
+            NavigationLink(destination: LoginViewHaveAccount(email: $email, password: $password, username: $username), label: {
                     Text("Register").font(Font.system(size: 20, design: .rounded))
                         .padding()
                         .frame(width: 280, height: 50, alignment: .center)
@@ -55,11 +57,12 @@ struct RegisterView: View {
                         .foregroundColor(Color("ColorText"))
                         .padding()
 //                        .onTapGesture{
+////                            if name != "" && email != "" && password != "" && username != "" {}
 //                            self.showLoginHaveAccount = true
+//                            //ketika uda diisi semua baru bisa klik button
 //                        }
                 }
-                )
-            } else {
+            )}else {
                 Text("Register").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
@@ -71,4 +74,6 @@ struct RegisterView: View {
         }
         
         }
+        
+    }
 }

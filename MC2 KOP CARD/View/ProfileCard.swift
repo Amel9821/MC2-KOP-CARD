@@ -64,17 +64,17 @@ struct ProfileCard: View {
                                     .font(.system(size: 25, weight: .bold, design: .default))
                                 
                                 Button {} label : {
-                                ZStack{
-                                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                        .stroke(.gray, lineWidth: 1)
-                                        .frame(width: 302, height: 34)
-                                    HStack{
-                                        Image("twitterBW")
-                                            .resizable()
-                                            .frame(width: 21, height: 21)
-                                        Text("username")
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                            .stroke(.gray, lineWidth: 1)
+                                            .frame(width: 302, height: 34)
+                                        HStack{
+                                            Image("twitterBW")
+                                                .resizable()
+                                                .frame(width: 21, height: 21)
+                                            Text("username")
+                                        }
                                     }
-                                }
                                 }.foregroundColor(.black)
                                 
                                 Spacer()

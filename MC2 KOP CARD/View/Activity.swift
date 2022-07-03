@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Activity: View {
+    
+  @Binding var showActivity: Bool
+    
     var body: some View {
         NavigationView{
             List{
@@ -73,13 +76,13 @@ struct Activity: View {
                 
             }.listStyle(.plain)
                 .navigationTitle("Activity")
-//            change the color: https://codewithchris.com/swiftui/swiftui-color/
+            //            change the color: https://codewithchris.com/swiftui/swiftui-color/
         }
     }
 }
 
-struct Activity_Previews: PreviewProvider {
-    static var previews: some View {
-        Activity()
-    }
-}
+//struct Activity_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Activity()
+//    }
+//}
