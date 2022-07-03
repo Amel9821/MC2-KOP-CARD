@@ -10,6 +10,7 @@ import SwiftUI
 struct TopPoints: View {
     var body: some View {
         
+      
         VStack{
         
                     Text("Top Points")
@@ -29,14 +30,17 @@ struct TopPoints: View {
                                         .background(Color("ColorProfile"))
                                         .cornerRadius(10)
                                         .padding(5)
+                                        .offset(x: 180)
                                     
                                     VStack{
                                         Text("ACCUTE")
+                                            .frame(width: 450)
                                             .offset(x: -10,y: -2)
                                             .font(.system(size: 13).bold())
                                         
                                     
                                     Text("3000 Points")
+                                            .frame(width: 450)
                                             .offset(x: 0,y: 5)
                                             .font(.system(size: 13))
                                     }
@@ -44,7 +48,8 @@ struct TopPoints: View {
                                         
                                 }
                             }
-                    }.padding(.top, 40).offset(x: -70)
+                    }.padding(.top, 40)
+                .offset(x: -70)
         
         
                        // .background(CustomColor.myColor2)
@@ -53,6 +58,7 @@ struct TopPoints: View {
                 .background(Color("Color3"))
             
                 }
+        
     }
 }
 
