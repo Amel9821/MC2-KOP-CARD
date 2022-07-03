@@ -8,6 +8,7 @@ import SwiftUI
 
 struct DashboardAfterLogin: View {
     
+    @State var showEvent: Bool = false
     @Binding var showDashboardAfterLogin: Bool
     @State var showQRCode: Bool = false
     @State var showQRScan: Bool = false
@@ -168,9 +169,11 @@ struct DashboardAfterLogin: View {
                 .font(.system(size: 25)).bold()
                 .offset(x: -120, y: 10)
             
-            Button(action: {}){
+                Button{
+                    showEvent.toggle()
+                } label: {
                 Text("See All")
-                    .foregroundColor(Color("Color1B"))
+                    .foregroundColor(Color("Color1B"))}
                     
             }.offset(x: 110,y: 10)
                 
@@ -209,7 +212,8 @@ struct DashboardAfterLogin: View {
             Spacer()
 //                .foregroundColor(CustomColor.myColor2)
         }
-        
+        .sheet(isPresented: $showEvent) {
+            EventView (showEvent: $showEvent)}
         .sheet(isPresented: $showActivity) {
             Activity(showActivity: $showActivity)}
         .sheet(isPresented: $showQRScan) {
@@ -218,17 +222,19 @@ struct DashboardAfterLogin: View {
             QRGeneratorView(showQRCode: $showQRCode, username: $username)}
         .background(WarnaAfter.myColor2After)
         
+        
 
         
     }
     
-}
+
 
 
 
 struct AcaraAfter: View{
+    @State var showEvent: Bool = false
     var body: some View{
-       EventView()
+        EventView(showEvent: $showEvent)
     }
 }
 

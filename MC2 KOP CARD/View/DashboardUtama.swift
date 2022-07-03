@@ -210,8 +210,9 @@ struct DashboardUtama: View {
 
 
 struct Acara: View{
+    @State var showEvent: Bool = false
     var body: some View{
-        EventView()
+        EventView(showEvent: $showEvent)
     }
 }
 

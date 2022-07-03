@@ -9,7 +9,9 @@ import SwiftUI
 
 struct EventView: View {
     @State var searchQuery: String = ""
+    @Binding var showEvent: Bool
     var body: some View {
+        NavigationView{
         ScrollView {
             VStack {
                 
@@ -43,14 +45,17 @@ struct EventView: View {
                         
                     }
                 }
-            }
+            }}
+            .navigationTitle("Event")
             .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
+            
         }
     }
 }
 
 struct EventView_Previews: PreviewProvider {
+    @State static var showEvent: Bool = false
     static var previews: some View {
-        EventView()
+        EventView(showEvent: $showEvent)
     }
 }
