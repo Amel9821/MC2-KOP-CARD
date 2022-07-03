@@ -23,6 +23,7 @@
 		437A9DAF287154C9006BD96F /* EditKopCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9DAE287154C9006BD96F /* EditKopCard.swift */; };
 		437A9DB428715676006BD96F /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 437A9DB328715676006BD96F /* CodeScanner */; };
 		437A9DB6287156F1006BD96F /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9DB5287156F0006BD96F /* QRCodeScanner.swift */; };
+		437A9DB82871A967006BD96F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437A9DB72871A967006BD96F /* Launch Screen.storyboard */; };
 		43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */; };
 		43CDB38628680B7500C07599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38528680B7500C07599 /* Assets.xcassets */; };
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		437A9DAC2871511F006BD96F /* DashboardAfterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardAfterLogin.swift; sourceTree = "<group>"; };
 		437A9DAE287154C9006BD96F /* EditKopCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKopCard.swift; sourceTree = "<group>"; };
 		437A9DB5287156F0006BD96F /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
+		437A9DB72871A967006BD96F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		43CDB37E28680B7400C07599 /* MC2 KOP CARD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2 KOP CARD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CDB38128680B7400C07599 /* MC2_KOP_CARDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC2_KOP_CARDApp.swift; sourceTree = "<group>"; };
 		43CDB38528680B7500C07599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				433F09DE286EA4BB009BDA4E /* CardView.swift */,
 				437A9DAE287154C9006BD96F /* EditKopCard.swift */,
 				437A9DB5287156F0006BD96F /* QRCodeScanner.swift */,
+				437A9DB72871A967006BD96F /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				43759D5F2868C20400A96F98 /* Krungthep.ttf in Resources */,
 				43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */,
+				437A9DB82871A967006BD96F /* Launch Screen.storyboard in Resources */,
 				43CDB38628680B7500C07599 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,11 +381,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "need to scan QR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,11 +415,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "need to scan QR";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
