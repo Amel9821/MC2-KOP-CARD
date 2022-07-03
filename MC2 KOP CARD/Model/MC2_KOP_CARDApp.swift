@@ -11,7 +11,7 @@ import SwiftUI
 struct MC2_KOP_CARDApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            OnBoardingPage()
         }
     }
 }

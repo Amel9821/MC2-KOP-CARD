@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var changeProfileImage = false
+    @State var openCameraRoll = false
+    @State var imageSelected = UIImage()
+    
     @State private var Name : String = "Pieter"
     @State private var Username : String = "PieterNCT"
     @State private var Bio : String = "Suka-suka kamu, aku sukanya Nayeon cantik"
@@ -21,9 +25,38 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
                 VStack{
-                    Image("addProfile")
-                        .resizable()
-                        .frame(width: 100, height: 100)
+                    ZStack(alignment: .bottomTrailing){
+                        
+                    Button(action: {
+                        changeProfileImage = true
+                        openCameraRoll = true
+                            
+                        
+                    }
+                           
+                           , label: {
+                        if changeProfileImage {
+                            Image(uiImage: imageSelected)
+                                .profileImageMod()
+                        } else {
+    //                        Image("profileImage")
+                            Image(systemName: "camera.circle.fill")
+                                .profileImageMod()
+                        }
+                    })
+                    
+                    
+                    Image(systemName: "plus")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        
+                        
+                    
+                }.sheet(isPresented: $openCameraRoll) {
+                    ImagePicker(selectedImage: $imageSelected, sourceType: .camera)
+                }
                     List{
                         HStack{
                             Text("Name")

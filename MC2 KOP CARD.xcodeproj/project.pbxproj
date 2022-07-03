@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2121A70B2871AEBD000CE6E0 /* PreviewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121A70A2871AEBD000CE6E0 /* PreviewPicker.swift */; };
+		2121A70D2871AF0C000CE6E0 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121A70C2871AF0C000CE6E0 /* ProfileImageMod.swift */; };
+		2121A70F2871B095000CE6E0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121A70E2871B095000CE6E0 /* CameraView.swift */; };
 		431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E265F286D7C4300C15518 /* QRGeneratorView.swift */; };
 		431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */; };
 		433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F09DE286EA4BB009BDA4E /* CardView.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2121A70A2871AEBD000CE6E0 /* PreviewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPicker.swift; sourceTree = "<group>"; };
+		2121A70C2871AF0C000CE6E0 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
+		2121A70E2871B095000CE6E0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		431E265F286D7C4300C15518 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewHaveAccount.swift; sourceTree = "<group>"; };
 		433F09DE286EA4BB009BDA4E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */,
 				437A9D9228703BF2006BD96F /* exchangePointView.swift */,
 				437A9D9828703C32006BD96F /* EditKopCard.swift */,
+				2121A70A2871AEBD000CE6E0 /* PreviewPicker.swift */,
+				2121A70E2871B095000CE6E0 /* CameraView.swift */,
+				2121A70C2871AF0C000CE6E0 /* ProfileImageMod.swift */,
 				437A9D9428703C15006BD96F /* Activity.swift */,
 				437A9D9E28703C47006BD96F /* ProfileCardLogin.swift */,
 				437A9D9C28703C40006BD96F /* ProfileCard.swift */,
@@ -217,6 +226,7 @@
 				431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
 				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
+				2121A70F2871B095000CE6E0 /* CameraView.swift in Sources */,
 				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,
 				437A9D9728703C1C006BD96F /* EventView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
@@ -224,10 +234,12 @@
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
 				437A9D9528703C15006BD96F /* Activity.swift in Sources */,
 				437A9D9B28703C38006BD96F /* idolView.swift in Sources */,
+				2121A70B2871AEBD000CE6E0 /* PreviewPicker.swift in Sources */,
 				437A9D9928703C32006BD96F /* EditKopCard.swift in Sources */,
 				437A9D9328703BF2006BD96F /* exchangePointView.swift in Sources */,
 				437A9DA328704167006BD96F /* OnBoardingPage.swift in Sources */,
 				437A9D9D28703C40006BD96F /* ProfileCard.swift in Sources */,
+				2121A70D2871AF0C000CE6E0 /* ProfileImageMod.swift in Sources */,
 				437A9DA928707AF0006BD96F /* DashboardUtama.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +373,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "KOP Card need camera access";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "KOP Card need photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,6 +406,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "KOP Card need camera access";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "KOP Card need photo library access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
