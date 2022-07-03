@@ -28,26 +28,34 @@ private let onBoardingSteps = [
 
 struct OnBoardingPage: View {
     @State private var currentStep = 0
-    @State private var showDashboard: Bool = false
+    @State var showDashboard: Bool = false
     
     init() {
         UIScrollView.appearance().bounces = false
     }
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             VStack{
                 HStack{
                     Spacer()
-                    NavigationLink(destination: DashboardUtama(), isActive: self.$showDashboard, label: {
+                    Button {
+                        showDashboard.toggle()
+                    } label: {
                         Text("Skip")
-                            .onTapGesture{
-                                self.showDashboard = true
                             }
                             .padding(16)
                             .foregroundColor(.gray)
-                    }
-                    )
+                    
+//                    NavigationLink(destination: DashboardUtama(), isActive: self.$showDashboard, label: {
+//                        Text("Skip")
+//                            .onTapGesture{
+//                                self.showDashboard = true
+//                            }
+//                            .padding(16)
+//                            .foregroundColor(.gray)
+//                    }
+//                    )
                     //                Button(action: {
                     //                    self.currentStep = onBoardingSteps.count - 1
                     //                }){
@@ -102,13 +110,16 @@ struct OnBoardingPage: View {
                         
                     }
                     
-                    if currentStep >= onBoardingSteps.count - 1 {
+                    if currentStep > onBoardingSteps.count - 1 {
                         self.showDashboard = true
                     }
-                    //                print(currentStep)
-                    //                print(onBoardingSteps.count)
+//                                    print(currentStep)
+//                                    print(onBoardingSteps.count)
                     
                 }){
+//                    Button {
+//                        showDashboard.toggle()
+//                    } label : {
                     Text(currentStep < onBoardingSteps.count - 1 ? "Next" : "Get started")
                         .padding(16)
                         .frame(maxWidth: .infinity)
@@ -116,13 +127,21 @@ struct OnBoardingPage: View {
                         .cornerRadius(16)
                         .padding(.horizontal, 16)
                         .foregroundColor(.purple)
-                }
+                
                 .buttonStyle(PlainButtonStyle())
             }
-        }}
-}
+            .fullScreenCover(isPresented: $showDashboard) {
+                DashboardUtama(showDashboard: $showDashboard)
+            }
+//            .sheet(isPresented: $showDashboard) {
+//                DashboardUtama(showDashboard: $showDashboard)}
+        }
+            
+    }
+//}
 struct OnBoardingPage_Previews: PreviewProvider {
     static var previews: some View {
         OnBoardingPage()
     }
+}
 }

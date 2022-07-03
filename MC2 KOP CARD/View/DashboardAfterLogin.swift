@@ -8,6 +8,7 @@ import SwiftUI
 
 struct DashboardAfterLogin: View {
     
+    @Binding var showDashboardAfterLogin: Bool
     @State var showQRCode: Bool = false
     @State var showQRScan: Bool = false
     @State var showActivity: Bool = false
@@ -234,10 +235,11 @@ struct AkunAfter: View{
 struct DashboardAfter: View{
     
     @Binding var username: String
+    @Binding var showDashboardAfterLogin: Bool
     
     var body: some View{
         TabView{
-            DashboardAfterLogin(username: $username)
+            DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username)
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")

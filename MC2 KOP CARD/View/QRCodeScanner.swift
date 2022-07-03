@@ -12,7 +12,7 @@ struct QRCodeScanner: View {
     
     @Binding var showQRScan: Bool
     @State private var isPresentingScanner = false
-    @State private var scannedCode: String = "Scan a QR code to get started."
+    @State private var scannedCode: String = "Scan a QR code to connect!"
     
     var scannerSheet : some View {
         CodeScannerView(

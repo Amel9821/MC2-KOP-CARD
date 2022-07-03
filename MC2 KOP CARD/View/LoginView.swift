@@ -39,9 +39,9 @@ struct LoginView: View {
                 Text("Sign in").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
-                    .background(Color("ColorButton"))
+                    .background(.gray)
                     .cornerRadius(10)
-                    .foregroundColor(Color("ColorText"))
+                    .foregroundColor(.white)
                     .padding()
                 HStack {
                     Text("Don't have an account?")

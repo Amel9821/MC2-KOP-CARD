@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginViewHaveAccount: View {
     
-    //  @Binding var showLoginHaveAccount: Bool
+    @State var showDashboardAfterLogin: Bool = false
     @Binding var email: String
     @Binding var password: String
     @Binding var username: String
@@ -28,13 +28,15 @@ struct LoginViewHaveAccount: View {
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .padding()
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
-            if email == email && password == password {
-                NavigationLink(destination: DashboardAfterLogin(username: $username), label: {
+            if email != "" && password != "" {
+                Button {
+                    showDashboardAfterLogin.toggle()
+                } label: {
                     Text("Sign in").font(Font.system(size: 20, design: .rounded))
                         .padding()
                         .frame(width: 280, height: 50, alignment: .center)
@@ -43,8 +45,19 @@ struct LoginViewHaveAccount: View {
                         .foregroundColor(Color("ColorText"))
                         .padding()
                 }
-                )
+                
+            } else {
+                Text("Sign in").font(Font.system(size: 20, design: .rounded))
+                    .padding()
+                    .frame(width: 280, height: 50, alignment: .center)
+                    .background(.gray)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .padding()
             }
         }
+        .fullScreenCover(isPresented: $showDashboardAfterLogin) {
+            DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username)
     }
+}
 }

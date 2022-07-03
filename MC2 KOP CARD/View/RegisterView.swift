@@ -37,7 +37,7 @@ struct RegisterView: View {
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
                 .padding()
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .padding()
                 .frame(width: 280, height: 50, alignment: .center)
                 .background(.gray.opacity(0.1))
@@ -66,9 +66,9 @@ struct RegisterView: View {
                 Text("Register").font(Font.system(size: 20, design: .rounded))
                     .padding()
                     .frame(width: 280, height: 50, alignment: .center)
-                    .background(Color("ColorButton"))
+                    .background(.gray)
                     .cornerRadius(10)
-                    .foregroundColor(Color("ColorText"))
+                    .foregroundColor(.white)
                     .padding()
             }
         }

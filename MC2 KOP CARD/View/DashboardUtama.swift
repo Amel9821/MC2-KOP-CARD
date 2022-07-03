@@ -23,6 +23,7 @@ import SwiftUI
 
 struct DashboardUtama: View {
     
+    @Binding var showDashboard: Bool
     @State private var showActivity: Bool = false
     @State private var showLogin: Bool = false
     @State private var email: String = ""
@@ -219,10 +220,10 @@ struct Warna {
 }
 
 struct Dashboard: View{
-   // @State private var showEvent: Bool = false
+   @Binding var showDashboard: Bool
     var body: some View{
         TabView{
-            DashboardUtama()
+            DashboardUtama(showDashboard: $showDashboard)
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
@@ -249,9 +250,9 @@ struct Dashboard: View{
 
 
 
-struct DashboardUtama_Previews: PreviewProvider {
-        static var previews: some View {
-            Dashboard()
-        }
-    }
+//struct DashboardUtama_Previews: PreviewProvider {
+//        static var previews: some View {
+//            Dashboard()
+//        }
+//    }
 
