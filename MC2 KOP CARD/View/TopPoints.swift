@@ -19,15 +19,32 @@ struct TopPoints: View {
         
                     ScrollView{
                         VStack(spacing: 20) {
-                                ForEach(0..<10) {
-                                    Text("Item \($0)")
+                            ForEach(0..<20) {_ in
+                                
+                                HStack{
+                                    Text("")
                                         .foregroundColor(.white)
                                         .font(.largeTitle)
-                                        .frame(width: 200, height: 200)
-                                        .background(.red)
+                                        .frame(width: 50, height: 50)
+                                        .background(Color("ColorProfile"))
+                                        .cornerRadius(10)
+                                        .padding(5)
+                                    
+                                    VStack{
+                                        Text("ACCUTE")
+                                            .offset(x: -10,y: -2)
+                                            .font(.system(size: 13).bold())
+                                        
+                                    
+                                    Text("3000 Points")
+                                            .offset(x: 0,y: 5)
+                                            .font(.system(size: 13))
+                                    }
+                                }
+                                        
                                 }
                             }
-                    }
+                    }.padding(.top, 40).offset(x: -70)
         
         
                        // .background(CustomColor.myColor2)
