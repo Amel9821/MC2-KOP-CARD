@@ -9,10 +9,14 @@ import SwiftUI
 
 struct EditKopCard: View {
     
-    @Binding var showEditKopCard: Bool
-    @State private var Name : String = "Pieter"
-    @State private var Username : String = "PieterNCT"
-    @State private var Bio : String = "Suka-suka kamu, aku sukanya Nayeon cantik"
+    @Binding var EditKopCard: Bool
+    @State var changeProfileImage = false
+    @State var openCameraRoll = false
+    @State var imageSelected = UIImage()
+    
+    @Binding var name : String
+    @Binding var username: String
+    @Binding var Bio : String
     @State private var Twitter : String = ""
     @State private var Instagram : String = ""
     @State private var Line : String = ""
@@ -21,66 +25,102 @@ struct EditKopCard: View {
     
     var body: some View {
         NavigationView {
-            VStack{
-                Image("addProfile")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                List{
-                    HStack{
-                        Text("Name")
-                        TextField("Jasmine Kpoper", text: $Name)
-                            .foregroundColor(Color("DPurple"))
-                            .padding(.leading, 21)
-                    }
-                    HStack{
-                        Text("Username")
-                        TextField("Jasmine Kpoper", text: $Username)
-                            .multilineTextAlignment(.trailing)
-                            .accentColor(.yellow)
-                            .foregroundColor(Color("DPurple"))
-                    }
-                    HStack {
-                        Text("Bio")
-                        TextField("Jasmine Kpoper", text: $Bio)
-                            .lineLimit(4)
-                            .multilineTextAlignment(.trailing)
-                            .frame(minWidth: 100, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity, alignment: .trailing)
-                            .foregroundColor(Color("DPurple"))
-                    }
-                    HStack{
-                        Text("Twitter")
-                        TextField("Jasmine Kpoper", text: $Twitter)
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(Color("DPurple"))
+                VStack{
+                    ZStack(alignment: .bottomTrailing){
+                        
+                    Button(action: {
+                        changeProfileImage = true
+                        openCameraRoll = true
+                            
                         
                     }
-                    HStack{
-                        Text("Instagram")
-                        TextField("Jasmine Kpoper", text: $Instagram)
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(Color("DPurple"))
+                           
+                           , label: {
+                        if changeProfileImage {
+                            Image(uiImage: imageSelected)
+                                .profileImageMod()
+                        } else {
+    //                        Image("profileImage")
+                            Image(systemName: "camera.circle.fill")
+                                .profileImageMod()
+                        }
+                    })
+                    
+                    
+                    Image(systemName: "plus")
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         
-                    }
-                    HStack{
-                        Text("Line")
-                        TextField("Jasmine Kpoper", text: $Line)
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(Color("DPurple"))
-                    }
-                    HStack{
-                        Text("KakaoTalk")
-                        TextField("Jasmine Kpoper", text: $KakaoTalk)
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(Color("DPurple"))
-                    }
-                    HStack{
-                        Text("Telegram")
-                        TextField("Jasmine Kpoper", text: $Telegram)
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(Color("DPurple"))
-                    }
+                        
+                    
+                }.sheet(isPresented: $openCameraRoll) {
+                    ImagePicker(selectedImage: $imageSelected, sourceType: .camera)
                 }
-                .listStyle(.plain)
+                    List{
+                        HStack{
+                            Text("Name")
+                            TextField(name, text: $name)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 60)
+                        }
+                        HStack{
+                            Text("Username")
+                            TextField(username, text: $username)
+                                //.multilineTextAlignment(.trailing)
+                                //.accentColor(.yellow)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 25)
+                        }
+                        HStack {
+                            Text("Bio")
+                            TextField("", text: $Bio)
+                                .lineLimit(4)
+                                //.multilineTextAlignment(.trailing)
+                                .frame(minWidth: 100, maxWidth: .infinity, minHeight: 100, maxHeight: .infinity, alignment: .trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 80)
+                        }
+                        HStack{
+                            Text("Twitter")
+                            TextField("", text: $Twitter)
+                              //  .multilineTextAlignment(.trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 50)
+                            
+                        }
+                        HStack{
+                            Text("Instagram")
+                            TextField("", text: $Instagram)
+                             //   .multilineTextAlignment(.trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 30)
+                            
+                        }
+                        HStack{
+                            Text("Line")
+                            TextField("", text: $Line)
+                              //  .multilineTextAlignment(.trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 80)
+                        }
+                        HStack{
+                            Text("KakaoTalk")
+                            TextField("", text: $KakaoTalk)
+                                //.multilineTextAlignment(.trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 35)
+                        }
+                        HStack{
+                            Text("Telegram")
+                            TextField("", text: $Telegram)
+                               // .multilineTextAlignment(.trailing)
+                                .foregroundColor(Color("DPurple"))
+                                .padding(.leading, 40)
+                        }
+                    }
+                    .listStyle(.plain)
             }
             .navigationTitle("Edit profile")
             .navigationBarTitleDisplayMode(.inline)
@@ -88,13 +128,12 @@ struct EditKopCard: View {
         }
     }
 }
-struct EditKopCard_Previews: PreviewProvider {
-    @State static var showEditKopCard: Bool = false
-    static var previews: some View {
-        Group {
-            EditKopCard(showEditKopCard: $showEditKopCard)
-                .previewInterfaceOrientation(.portrait)
-            //            ContentView()
-        }
-    }
-}
+//struct EditKopCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            EditKopCard(EditKopCard: $)
+//                .previewInterfaceOrientation(.portrait)
+//            //            ContentView()
+//        }
+//    }
+//}

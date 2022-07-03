@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct MC2_KOP_CARDApp: App {
+//    @State var showEvent: Bool = false
+//    @State var showDashboard = false
+//    @State var username = ""
+//    @State var name = ""
+//    @State var Bio = ""
     var body: some Scene {
         WindowGroup {
-            OnBoardingPage()
+           OnBoardingPage()
+//            Dashboard(showEvent: $showEvent, showDashboard: $showDashboard, username: $username)
+            //ContentView()
+            //ProfileCard(Bio: Bio, name: $name, username: $username)
         }
     }
 }

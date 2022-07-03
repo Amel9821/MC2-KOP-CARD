@@ -208,19 +208,18 @@ struct DashboardAfterLogin: View {
                 }
             }
             
-
+            .sheet(isPresented: $showEvent) {
+                EventView (showEvent: $showEvent)}
+            .sheet(isPresented: $showActivity) {
+                Activity(showActivity: $showActivity)}
+            .sheet(isPresented: $showQRScan) {
+                QRCodeScanner(showQRScan: $showQRScan)}
+            .sheet(isPresented: $showQRCode) {
+                QRGeneratorView(showQRCode: $showQRCode, username: $username)}
+            .background(WarnaAfter.myColor2After)
             Spacer()
 //                .foregroundColor(CustomColor.myColor2)
         }
-        .sheet(isPresented: $showEvent) {
-            EventView (showEvent: $showEvent)}
-        .sheet(isPresented: $showActivity) {
-            Activity(showActivity: $showActivity)}
-        .sheet(isPresented: $showQRScan) {
-            QRCodeScanner(showQRScan: $showQRScan)}
-        .sheet(isPresented: $showQRCode) {
-            QRGeneratorView(showQRCode: $showQRCode, username: $username)}
-        .background(WarnaAfter.myColor2After)
         
         
 
@@ -240,15 +239,18 @@ struct AcaraAfter: View{
 
 struct AkunAfter: View{
     @Binding var username: String
+    @State var name: String
+    @State var Bio: String
     var body: some View{
-        ProfileCard(username: $username)
+        ProfileCard(Bio: Bio, name: $name, username: $username)
     }
 }
 
 struct DashboardAfter: View{
-    
+    @State var name: String = ""
     @Binding var username: String
     @Binding var showDashboardAfterLogin: Bool
+    @Binding var Bio: String
     
     var body: some View{
         TabView{
@@ -264,7 +266,7 @@ struct DashboardAfter: View{
                             Text("Events")
                         }
                     
-            AkunAfter(username: $username)
+            AkunAfter(username: $username, name: name, Bio: Bio)
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -284,8 +286,10 @@ struct DashboardAfterLogin_Previews: PreviewProvider {
     
     @State static var username: String = ""
     @State static var showDashboardAfterLogin: Bool = false
+    @State static var name: String = ""
+    @State static var Bio: String = ""
         static var previews: some View {
-            DashboardAfter(username: $username, showDashboardAfterLogin: $showDashboardAfterLogin)
+            DashboardAfter(name: name, username: $username, showDashboardAfterLogin: $showDashboardAfterLogin, Bio: $Bio)
         }
     }
 

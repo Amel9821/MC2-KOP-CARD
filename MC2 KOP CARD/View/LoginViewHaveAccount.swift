@@ -35,7 +35,8 @@ struct LoginViewHaveAccount: View {
                 .padding()
             if email != "" && password != "" {
                 Button {
-                    showDashboardAfterLogin.toggle()
+               // UserDefaults.standard.set(true, forKey: "isDoneLogin")
+               showDashboardAfterLogin.toggle()
                 } label: {
                     Text("Sign in").font(Font.system(size: 20, design: .rounded))
                         .padding()
