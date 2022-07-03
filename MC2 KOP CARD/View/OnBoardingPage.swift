@@ -41,6 +41,7 @@ struct OnBoardingPage: View {
                     Spacer()
                     Button {
                         showDashboard.toggle()
+                        //UserDefaults.standard.set(true, forKey: "isDoneOnboarding")
                     } label: {
                         Text("Skip")
                             }
@@ -110,8 +111,9 @@ struct OnBoardingPage: View {
                         
                     }
                     
-                    if currentStep > onBoardingSteps.count - 1 {
+                    if currentStep >= onBoardingSteps.count - 1 {
                         self.showDashboard = true
+                        //UserDefaults.standard.set(true, forKey: "isDoneDashboard")
                     }
 //                                    print(currentStep)
 //                                    print(onBoardingSteps.count)

@@ -28,7 +28,10 @@ struct DashboardUtama: View {
     @State private var showLogin: Bool = false
     @State private var email: String = ""
     @State private var password: String = ""
-    
+    @State var showEvent: Bool = false
+    @State var username: String = ""
+//    private let screenWidth = UIScreen.main.bounds.size.width
+//    private let screenHeight = UIScreen.main.bounds.size.height
     var body: some View {
         
         VStack{
@@ -49,7 +52,7 @@ struct DashboardUtama: View {
                     Image(systemName: "person.2.wave.2.fill")
                         .resizable()
                         .frame(width: 40, height: 25)
-                        .foregroundColor(Warna.myColor)
+                      .foregroundColor(Warna.myColor)
                         .padding(.trailing,30)
                 }
                 
@@ -191,9 +194,29 @@ struct DashboardUtama: View {
             
             
             Spacer()
-            //                .foregroundColor(CustomColor.myColor2)
+           .foregroundColor(Warna.myColor2)
         }
-        
+//                TabView{
+//                    DashboardUtama(showDashboard: $showDashboard)
+//                        .tabItem{
+//                            Image(systemName: "house")
+//                            Text("Home")
+//                        }
+//
+//                    EventView(showEvent: $showEvent)
+//                    // NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
+//                        .tabItem{
+//
+//                            Image(systemName: "calendar")
+//                            Text("Events")
+//                        }
+//
+//                    ProfileCard(username: $username)
+//                        .tabItem{
+//                            Image(systemName: "person.fill")
+//                            Text("Profile")
+//                        }
+//                }
         .background(Warna.myColor2)
         .sheet(isPresented: $showActivity) {
             Activity(showActivity: $showActivity)}
@@ -218,8 +241,10 @@ struct Acara: View{
 
 struct Akun: View{
     @Binding var username: String
+    @State var name: String
+    @Binding var Bio: String
     var body: some View{
-        ProfileCard(username: $username)
+        ProfileCard(Bio: Bio, name: $name, username: $username)
     }
 }
 
@@ -229,25 +254,29 @@ struct Warna {
 }
 
 struct Dashboard: View{
-    @Binding var showDashboard: Bool
+   @State var showEvent: Bool
+    @State var showDashboard: Bool
     @Binding var username: String
+    @State var name: String
+    @Binding var Bio: String
     var body: some View{
         TabView{
             DashboardUtama(showDashboard: $showDashboard)
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
+//                    Label("Home", image: "house")
                 }
-            
+
             Acara()
-            //            NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
+            // NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
                 .tabItem{
-                    
+
                     Image(systemName: "calendar")
                     Text("Events")
                 }
-            
-            Akun(username: $username)
+
+            Akun(username: $username, name: name, Bio: $Bio )
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -263,9 +292,8 @@ struct Dashboard: View{
 struct DashboardUtama_Previews:
     PreviewProvider {
     @State static var showDashboard: Bool = false
-    @State static var username: String = ""
     static var previews: some View {
-        Dashboard(showDashboard: $showDashboard, username: $username)
+        DashboardUtama(showDashboard: $showDashboard)
     }
 }
 

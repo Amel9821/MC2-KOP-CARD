@@ -29,7 +29,11 @@
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
 		43CDB393286812C700C07599 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB392286812C700C07599 /* LoginView.swift */; };
 		43CDB3952868132300C07599 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB3942868132300C07599 /* RegisterView.swift */; };
-		5F0ECA142871D5A000E7189F /* TopPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0ECA132871D5A000E7189F /* TopPoints.swift */; };
+		43E436242871DAE800DF1618 /* PreviewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436232871DAE800DF1618 /* PreviewPicker.swift */; };
+		43E436262871DB2300DF1618 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436252871DB2300DF1618 /* CameraView.swift */; };
+		43E436282871DB6200DF1618 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436272871DB6200DF1618 /* ProfileImageMod.swift */; };
+		43E4362A2871FA0100DF1618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436292871FA0100DF1618 /* ContentView.swift */; };
+		43E4362C28720C6700DF1618 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4362B28720C6700DF1618 /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +60,11 @@
 		43CDB38828680B7500C07599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43CDB392286812C700C07599 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		43CDB3942868132300C07599 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		5F0ECA132871D5A000E7189F /* TopPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPoints.swift; sourceTree = "<group>"; };
+		43E436232871DAE800DF1618 /* PreviewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPicker.swift; sourceTree = "<group>"; };
+		43E436252871DB2300DF1618 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		43E436272871DB6200DF1618 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
+		43E436292871FA0100DF1618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43E4362B28720C6700DF1618 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +151,14 @@
 				437A9D9628703C1C006BD96F /* EventView.swift */,
 				433F09DE286EA4BB009BDA4E /* CardView.swift */,
 				437A9DAE287154C9006BD96F /* EditKopCard.swift */,
+				43E436232871DAE800DF1618 /* PreviewPicker.swift */,
+				43E436252871DB2300DF1618 /* CameraView.swift */,
+				43E436272871DB6200DF1618 /* ProfileImageMod.swift */,
 				437A9DB5287156F0006BD96F /* QRCodeScanner.swift */,
 				5F0ECA132871D5A000E7189F /* TopPoints.swift */,
 				437A9DB72871A967006BD96F /* Launch Screen.storyboard */,
+				43E436292871FA0100DF1618 /* ContentView.swift */,
+				43E4362B28720C6700DF1618 /* ContentView2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 			files = (
 				437A9DB6287156F1006BD96F /* QRCodeScanner.swift in Sources */,
 				431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */,
+				43E4362A2871FA0100DF1618 /* ContentView.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
 				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
 				5F0ECA142871D5A000E7189F /* TopPoints.swift in Sources */,
@@ -244,15 +258,19 @@
 				437A9D9728703C1C006BD96F /* EventView.swift in Sources */,
 				43CDB3952868132300C07599 /* RegisterView.swift in Sources */,
 				437A9DAF287154C9006BD96F /* EditKopCard.swift in Sources */,
+				43E436242871DAE800DF1618 /* PreviewPicker.swift in Sources */,
 				433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */,
 				437A9DAD2871511F006BD96F /* DashboardAfterLogin.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
+				43E436282871DB6200DF1618 /* ProfileImageMod.swift in Sources */,
 				437A9D9528703C15006BD96F /* Activity.swift in Sources */,
+				43E436262871DB2300DF1618 /* CameraView.swift in Sources */,
 				437A9D9B28703C38006BD96F /* idolView.swift in Sources */,
 				437A9D9328703BF2006BD96F /* exchangePointView.swift in Sources */,
 				437A9DA328704167006BD96F /* OnBoardingPage.swift in Sources */,
 				437A9D9D28703C40006BD96F /* ProfileCard.swift in Sources */,
 				437A9DA928707AF0006BD96F /* DashboardUtama.swift in Sources */,
+				43E4362C28720C6700DF1618 /* ContentView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +404,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "need to scan QR";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "KOPCard need access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +439,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC2-KOP-CARD-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "need to scan QR";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "KOPCard need access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

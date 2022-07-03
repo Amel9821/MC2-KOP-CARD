@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ProfileCard: View {
     
+    var imageSelected = UIImage()
+    @State var Bio: String
+    @Binding var name: String
     @Binding var username: String
     @State var showidolView: Bool = false
     @State var showExchangePoint: Bool  = false
@@ -33,7 +36,7 @@ struct ProfileCard: View {
                                 .frame(width: 358, height: 233)}
                             VStack(alignment: .leading){
                                 HStack{
-                                    Image("ProfileI")
+                                    Image(uiImage: imageSelected)
                                         .resizable()
                                         .frame(width: 75, height: 75)
                                     Spacer()
@@ -55,8 +58,8 @@ struct ProfileCard: View {
                                     .font(.system(size: 24, weight: .bold, design: .default))
                                 Spacer()
                                     .frame(height: 5)
-//                                Text("Suka-suka kamu, aku sukanya bujang NCT")
-//                                    .foregroundColor(.white)
+                               Text(Bio)
+                                    .foregroundColor(.white)
                                 Spacer()
                                     .frame(height: 40)
                             }
@@ -261,7 +264,7 @@ struct ProfileCard: View {
                 }
             }
             .sheet(isPresented: $showEditKopCard) {
-                EditKopCard(showEditKopCard: $showEditKopCard)}
+                EditKopCard(EditKopCard: $showEditKopCard, name: $name, username: $username, Bio: $Bio)}
             .sheet(isPresented: $showExchangePoint) {
                 exchangePointView(showExchangePoint: $showExchangePoint)}
             .sheet(isPresented: $showidolView) {
@@ -284,7 +287,9 @@ struct ProfileCard: View {
 
 struct ProfileCard_Previews: PreviewProvider {
     @State static var username: String = ""
+    @State static var name: String = ""
+    @State static var Bio: String = ""
     static var previews: some View {
-        ProfileCard(username: $username)
+        ProfileCard(Bio: Bio, name: $name, username: $username)
     }
 }
