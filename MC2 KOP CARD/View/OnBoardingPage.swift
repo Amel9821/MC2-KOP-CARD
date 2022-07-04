@@ -31,6 +31,7 @@ struct OnBoardingPage: View {
     @State var showTabBar = false
     @State var username = ""
     @State var name = ""
+    @State var imageSelected = UIImage()
    // @State var showDashboard: Bool = false
     
     init() {
@@ -136,7 +137,7 @@ struct OnBoardingPage: View {
                 .buttonStyle(PlainButtonStyle())
             }
                 .fullScreenCover(isPresented: $showTabBar) {
-                    TabBar(username: $username, name: $name, TabBar: $showTabBar)
+                    TabBar(username: $username, name: $name, TabBar: $showTabBar, imageSelected: $imageSelected)
             }
 //            .sheet(isPresented: $showDashboard) {
 //                DashboardUtama(showDashboard: $showDashboard)}

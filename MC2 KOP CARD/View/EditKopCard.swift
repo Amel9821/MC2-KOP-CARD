@@ -12,7 +12,7 @@ struct EditKopCard: View {
     @Binding var EditKopCard: Bool
     @State var changeProfileImage = false
     @State var openCameraRoll = false
-    @State var imageSelected = UIImage()
+    @Binding var imageSelected: UIImage
     
     @Binding var name : String
     @Binding var username: String

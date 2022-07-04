@@ -15,6 +15,7 @@ struct LoginViewHaveAccount: View {
     @Binding var password: String
     @Binding var username: String
     @Binding var name: String
+    @Binding var imageSelected: UIImage
     
     var body: some View {
         VStack {
@@ -60,7 +61,7 @@ struct LoginViewHaveAccount: View {
             }
         }
         .fullScreenCover(isPresented: $showTabBar) {
-            TabBar(username: $username, name: $name, TabBar: $showTabBar)
+            TabBar(username: $username, name: $name, TabBar: $showTabBar, imageSelected: $imageSelected)
     }
 }
 }

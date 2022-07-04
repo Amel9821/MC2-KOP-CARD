@@ -15,6 +15,7 @@ struct TabBar: View {
     @Binding var name: String
     @State var showDashboardAfterLogin = false
     @Binding var TabBar: Bool
+    @Binding var imageSelected: UIImage
     
     var body: some View {
         TabView{
@@ -40,7 +41,7 @@ struct TabBar: View {
                     Text("Events")
                 }
 
-            ProfileCard(Bio: Bio, name: $name, username: $username)
+            ProfileCard(Bio: Bio, name: $name, username: $username, imageSelected: $imageSelected)
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -49,11 +50,12 @@ struct TabBar: View {
     }
 }
 
-struct TabBar_Previews: PreviewProvider {
-    @State static var showTabBar = false
-    @State static var username = ""
-    @State static var name = ""
-    static var previews: some View {
-        TabBar(username: $username, name: $name, TabBar: $showTabBar)
-    }
-}
+//struct TabBar_Previews: PreviewProvider {
+//    @State static var showTabBar = false
+//    @State static var username = ""
+//    @State static var name = ""
+//    @State static var imageSelected = UIImage()
+//    static var previews: some View {
+//        TabBar(username: $username, name: $name, TabBar: $showTabBar, imageSelected: $imageSelected)
+//    }
+//}

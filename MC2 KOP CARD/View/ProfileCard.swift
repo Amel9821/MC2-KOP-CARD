@@ -10,13 +10,14 @@ import SwiftUI
 struct ProfileCard: View {
     
  //   @State var imageSelected = UIImage()
+    //var imageSelected = UIImage()
     @State var Bio: String
     @Binding var name: String
     @Binding var username: String
     @State var showidolView: Bool = false
     @State var showExchangePoint: Bool  = false
     @State var showEditKopCard: Bool = false
-   // @Binding var imageSelected: UIImage!
+    @Binding var imageSelected: UIImage
     
     var body: some View {
         NavigationView{
@@ -37,8 +38,9 @@ struct ProfileCard: View {
                                 .frame(width: 358, height: 233)}
                             VStack(alignment: .leading){
                                 HStack{
-                                    Image("ProfileI")
+                                    Image(uiImage: imageSelected)
                                         //uiImage: imageSelected)
+                                    //"ProfileI"
                                         .resizable()
                                         .frame(width: 75, height: 75)
                                     Spacer()
@@ -266,7 +268,7 @@ struct ProfileCard: View {
                 }
             }
             .sheet(isPresented: $showEditKopCard) {
-                EditKopCard(EditKopCard: $showEditKopCard, name: $name, username: $username, Bio: $Bio)}
+                EditKopCard(EditKopCard: $showEditKopCard, imageSelected: $imageSelected, name: $name, username: $username, Bio: $Bio)}
             .sheet(isPresented: $showExchangePoint) {
                 exchangePointView(showExchangePoint: $showExchangePoint)}
             .sheet(isPresented: $showidolView) {
