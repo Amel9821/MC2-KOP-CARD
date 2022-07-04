@@ -87,6 +87,7 @@ struct DashboardUtama: View {
                     .offset(x: 105, y: 15)
                 
                 Text("Scan and connect!")
+                    .bold()
                     .foregroundColor(Color.white)
                 //.font(Font.custom("Krungthep", size: 18))
                     .offset(y: -10)
@@ -181,8 +182,8 @@ struct DashboardUtama: View {
                                 .font(.system(size: 10).bold())
                             Image("NCTback")
                                 .resizable()
-                                .frame(width: 118, height: 98)
-                                .offset(x: 12, y: -12)
+                                .frame(width: 118, height: 94)
+                                .offset(x: 13, y: -12)
                                 .padding()
                                 
                             

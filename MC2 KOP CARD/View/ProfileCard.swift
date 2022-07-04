@@ -16,6 +16,7 @@ struct ProfileCard: View {
     @State var showidolView: Bool = false
     @State var showExchangePoint: Bool  = false
     @State var showEditKopCard: Bool = false
+   // @Binding var imageSelected: UIImage!
     
     var body: some View {
         NavigationView{
