@@ -8,8 +8,7 @@
  import SwiftUI
 
  struct TopPoints: View {
-     @State var showTopPoints: Bool = false
-     
+     @Binding var showTopPoints: Bool
      var body: some View {
 
 
@@ -65,8 +64,9 @@
  }
 
  struct TopPoints_Previews: PreviewProvider {
+     @State static var showTopPoints = false
      static var previews: some View {
-         TopPoints()
+         TopPoints(showTopPoints: $showTopPoints)
      }
  }
 

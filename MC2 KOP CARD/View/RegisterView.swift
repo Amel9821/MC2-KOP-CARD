@@ -48,7 +48,7 @@ struct RegisterView: View {
                 .background(.gray.opacity(0.1))
                 .padding()
             if name != "" && email != "" && password != "" && username != "" {
-            NavigationLink(destination: LoginViewHaveAccount(email: $email, password: $password, username: $username), label: {
+                NavigationLink(destination: LoginViewHaveAccount(email: $email, password: $password, username: $username, name: $name), label: {
                     Text("Register").font(Font.system(size: 20, design: .rounded))
                         .padding()
                         .frame(width: 280, height: 50, alignment: .center)

@@ -29,6 +29,7 @@
 		43CDB38928680B7500C07599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CDB38828680B7500C07599 /* Preview Assets.xcassets */; };
 		43CDB393286812C700C07599 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB392286812C700C07599 /* LoginView.swift */; };
 		43CDB3952868132300C07599 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CDB3942868132300C07599 /* RegisterView.swift */; };
+		43E4360628728662001FC141 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E4360528728662001FC141 /* TabBar.swift */; };
 		43E436242871DAE800DF1618 /* PreviewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436232871DAE800DF1618 /* PreviewPicker.swift */; };
 		43E436262871DB2300DF1618 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436252871DB2300DF1618 /* CameraView.swift */; };
 		43E436282871DB6200DF1618 /* ProfileImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E436272871DB6200DF1618 /* ProfileImageMod.swift */; };
@@ -61,6 +62,7 @@
 		43CDB38828680B7500C07599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43CDB392286812C700C07599 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		43CDB3942868132300C07599 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		43E4360528728662001FC141 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		43E436232871DAE800DF1618 /* PreviewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPicker.swift; sourceTree = "<group>"; };
 		43E436252871DB2300DF1618 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		43E436272871DB6200DF1618 /* ProfileImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageMod.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				437A9DA228704167006BD96F /* OnBoardingPage.swift */,
 				43CDB392286812C700C07599 /* LoginView.swift */,
 				437A9DA828707AF0006BD96F /* DashboardUtama.swift */,
+				43E4360528728662001FC141 /* TabBar.swift */,
 				437A9DAC2871511F006BD96F /* DashboardAfterLogin.swift */,
 				431E265F286D7C4300C15518 /* QRGeneratorView.swift */,
 				43CDB3942868132300C07599 /* RegisterView.swift */,
@@ -253,6 +256,7 @@
 				437A9DB6287156F1006BD96F /* QRCodeScanner.swift in Sources */,
 				431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */,
 				43E4362A2871FA0100DF1618 /* ContentView.swift in Sources */,
+				43E4360628728662001FC141 /* TabBar.swift in Sources */,
 				43CDB393286812C700C07599 /* LoginView.swift in Sources */,
 				437A9D9F28703C47006BD96F /* ProfileCardLogin.swift in Sources */,
 				431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */,

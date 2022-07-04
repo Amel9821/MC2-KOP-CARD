@@ -233,68 +233,68 @@ struct DashboardUtama: View {
 
 
 
-struct Acara: View{
-    @State var showEvent: Bool = false
-    var body: some View{
-        EventView(showEvent: $showEvent)
-    }
-}
-
-struct Akun: View{
-    @Binding var username: String
-    @State var name: String
-    @Binding var Bio: String
-    var body: some View{
-        ProfileCard(Bio: Bio, name: $name, username: $username)
-    }
-}
-
+//struct Acara: View{
+//    @State var showEvent: Bool = false
+//    var body: some View{
+//        EventView(showEvent: $showEvent)
+//    }
+//}
+//
+//struct Akun: View{
+//    @Binding var username: String
+//    @State var name: String
+//    @Binding var Bio: String
+//    var body: some View{
+//        ProfileCard(Bio: Bio, name: $name, username: $username)
+//    }
+//}
+//
 struct Warna {
     static let myColor = Color("Color1B")
     static let myColor2 = Color("Color3B")
 }
 
-struct Dashboard: View{
-   @State var showEvent: Bool
-    @State var showDashboard: Bool
-    @Binding var username: String
-    @State var name: String
-    @Binding var Bio: String
-    var body: some View{
-        TabView{
-            DashboardUtama(showDashboard: $showDashboard)
-                .tabItem{
-                    Image(systemName: "house")
-                    Text("Home")
-//                    Label("Home", image: "house")
-                }
-
-            Acara()
-            // NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
-                .tabItem{
-
-                    Image(systemName: "calendar")
-                    Text("Events")
-                }
-
-            Akun(username: $username, name: name, Bio: $Bio )
-                .tabItem{
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-        }
-    }
-}
-
-
-
-
-
-struct DashboardUtama_Previews:
-    PreviewProvider {
-    @State static var showDashboard: Bool = false
-    static var previews: some View {
-        DashboardUtama(showDashboard: $showDashboard)
-    }
-}
-
+//struct Dashboard: View{
+//   @State var showEvent: Bool
+//    @State var showDashboard: Bool
+//    @Binding var username: String
+//    @State var name: String
+//    @Binding var Bio: String
+//    var body: some View{
+//        TabView{
+//            DashboardUtama(showDashboard: $showDashboard)
+//                .tabItem{
+//                    Image(systemName: "house")
+//                    Text("Home")
+////                    Label("Home", image: "house")
+//                }
+//
+//            Acara()
+//            // NavigationLink(destination: EventView(), isActive: self.$showEvent, label:)
+//                .tabItem{
+//
+//                    Image(systemName: "calendar")
+//                    Text("Events")
+//                }
+//
+//            Akun(username: $username, name: name, Bio: $Bio )
+//                .tabItem{
+//                    Image(systemName: "person.fill")
+//                    Text("Profile")
+//                }
+//        }
+//    }
+//}
+//
+//
+//
+//
+//
+//struct DashboardUtama_Previews:
+//    PreviewProvider {
+//    @State static var showDashboard: Bool = false
+//    static var previews: some View {
+//        DashboardUtama(showDashboard: $showDashboard)
+//    }
+//}
+//

@@ -28,7 +28,10 @@ private let onBoardingSteps = [
 
 struct OnBoardingPage: View {
     @State private var currentStep = 0
-    @State var showDashboard: Bool = false
+    @State var showTabBar = false
+    @State var username = ""
+    @State var name = ""
+   // @State var showDashboard: Bool = false
     
     init() {
         UIScrollView.appearance().bounces = false
@@ -40,7 +43,7 @@ struct OnBoardingPage: View {
                 HStack{
                     Spacer()
                     Button {
-                        showDashboard.toggle()
+                        showTabBar.toggle()
                         //UserDefaults.standard.set(true, forKey: "isDoneOnboarding")
                     } label: {
                         Text("Skip")
@@ -112,7 +115,7 @@ struct OnBoardingPage: View {
                     }
                     
                     if currentStep >= onBoardingSteps.count - 1 {
-                        self.showDashboard = true
+                        self.showTabBar = true
                         //UserDefaults.standard.set(true, forKey: "isDoneDashboard")
                     }
 //                                    print(currentStep)
@@ -132,8 +135,8 @@ struct OnBoardingPage: View {
                 
                 .buttonStyle(PlainButtonStyle())
             }
-            .fullScreenCover(isPresented: $showDashboard) {
-                DashboardUtama(showDashboard: $showDashboard)
+                .fullScreenCover(isPresented: $showTabBar) {
+                    TabBar(username: $username, name: $name, TabBar: $showTabBar)
             }
 //            .sheet(isPresented: $showDashboard) {
 //                DashboardUtama(showDashboard: $showDashboard)}

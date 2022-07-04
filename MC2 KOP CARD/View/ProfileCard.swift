@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileCard: View {
     
-    var imageSelected = UIImage()
+ //   @State var imageSelected = UIImage()
     @State var Bio: String
     @Binding var name: String
     @Binding var username: String
@@ -36,7 +36,8 @@ struct ProfileCard: View {
                                 .frame(width: 358, height: 233)}
                             VStack(alignment: .leading){
                                 HStack{
-                                    Image(uiImage: imageSelected)
+                                    Image("ProfileI")
+                                        //uiImage: imageSelected)
                                         .resizable()
                                         .frame(width: 75, height: 75)
                                     Spacer()
@@ -285,11 +286,12 @@ struct ProfileCard: View {
 }
 
 
-struct ProfileCard_Previews: PreviewProvider {
-    @State static var username: String = ""
-    @State static var name: String = ""
-    @State static var Bio: String = ""
-    static var previews: some View {
-        ProfileCard(Bio: Bio, name: $name, username: $username)
-    }
-}
+//struct ProfileCard_Previews: PreviewProvider {
+//    @State static var username: String = ""
+//    @State static var name: String = ""
+//    @State static var Bio: String = ""
+//    @State static var imageSelected = UIImage()
+//    static var previews: some View {
+//        ProfileCard(imageSelected: imageSelected, Bio: Bio, name: $name, username: $username)
+//    }
+//}

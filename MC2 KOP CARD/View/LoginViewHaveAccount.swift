@@ -9,10 +9,12 @@ import SwiftUI
 
 struct LoginViewHaveAccount: View {
     
+    @State var showTabBar = false
     @State var showDashboardAfterLogin: Bool = false
     @Binding var email: String
     @Binding var password: String
     @Binding var username: String
+    @Binding var name: String
     
     var body: some View {
         VStack {
@@ -36,7 +38,7 @@ struct LoginViewHaveAccount: View {
             if email != "" && password != "" {
                 Button {
                // UserDefaults.standard.set(true, forKey: "isDoneLogin")
-               showDashboardAfterLogin.toggle()
+               showTabBar.toggle()
                 } label: {
                     Text("Sign in").font(Font.system(size: 20, design: .rounded))
                         .padding()
@@ -57,8 +59,8 @@ struct LoginViewHaveAccount: View {
                     .padding()
             }
         }
-        .fullScreenCover(isPresented: $showDashboardAfterLogin) {
-            DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username)
+        .fullScreenCover(isPresented: $showTabBar) {
+            TabBar(username: $username, name: $name, TabBar: $showTabBar)
     }
 }
 }

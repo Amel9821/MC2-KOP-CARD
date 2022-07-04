@@ -84,7 +84,7 @@ struct EditKopCard: View {
                         }
                         HStack{
                             Text("Twitter")
-                            TextField("", text: $Twitter)
+                            TextField("Add username Twitter here", text: $Twitter)
                               //  .multilineTextAlignment(.trailing)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 50)
@@ -92,7 +92,7 @@ struct EditKopCard: View {
                         }
                         HStack{
                             Text("Instagram")
-                            TextField("", text: $Instagram)
+                            TextField("Add username Instagram here", text: $Instagram)
                              //   .multilineTextAlignment(.trailing)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 30)
@@ -100,21 +100,21 @@ struct EditKopCard: View {
                         }
                         HStack{
                             Text("Line")
-                            TextField("", text: $Line)
+                            TextField("Add username Line here", text: $Line)
                               //  .multilineTextAlignment(.trailing)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 80)
                         }
                         HStack{
                             Text("KakaoTalk")
-                            TextField("", text: $KakaoTalk)
+                            TextField("Add username KakaoTalk here", text: $KakaoTalk)
                                 //.multilineTextAlignment(.trailing)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 35)
                         }
                         HStack{
                             Text("Telegram")
-                            TextField("", text: $Telegram)
+                            TextField("Add username Telegram here", text: $Telegram)
                                // .multilineTextAlignment(.trailing)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 40)
