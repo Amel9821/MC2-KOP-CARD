@@ -77,6 +77,17 @@ struct Activity: View {
             }.listStyle(.plain)
                 .navigationTitle("Activity")
             //            change the color: https://codewithchris.com/swiftui/swiftui-color/
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button {
+                            showActivity.toggle()
+                        }
+                        label : {
+                            Text("Back")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
         }
     }
 }

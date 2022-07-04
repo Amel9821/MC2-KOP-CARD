@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+//struct AddIdol {
+//    var pict: String
+//    var idol: String
+//}
+//
+//private let addIdol = [AddIdol(pict: "", idol: "")]
+
+
+
 struct ProfileCard: View {
     
  //   @State var imageSelected = UIImage()
@@ -18,6 +27,7 @@ struct ProfileCard: View {
     @State var showExchangePoint: Bool  = false
     @State var showEditKopCard: Bool = false
     @Binding var imageSelected: UIImage
+   // @State var poin: Int = 1000
     
     var body: some View {
         NavigationView{
@@ -43,13 +53,15 @@ struct ProfileCard: View {
                                     //"ProfileI"
                                         .resizable()
                                         .frame(width: 75, height: 75)
+                                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                     Spacer()
                                         .frame(width: 150)
                                     VStack{
                                         Text("KOP Card")
                                             .font(Font.custom("Krungthep", size: 18))
                                             .foregroundColor(.white)
-                                        Text("150 Points")
+                                    
+                                        Text("1,000 Points")
                                             .foregroundColor(.white)
                                         Spacer()
                                             .frame(height: 25)
@@ -244,29 +256,25 @@ struct ProfileCard: View {
                             HStack(spacing: 20){
                                 Spacer()
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                        .fill(Color("GPurple"))
-                                        .frame(width: 152, height: 163)
-                                        .shadow(color: .gray
-                                                , radius: 1, x: 2, y: 0)
-                                    Image("nctdream")
+                                    Image("bts")
                                         .resizable()
-                                        .frame(width: 150, height: 160, alignment: .top)
-                                        .cornerRadius(25)
-                                    Text("**NCT DREAM**")
-                                        .font(.system(size: 14))
-                                        .frame(width: 152, height: 65)
+                                        .frame(width: 150, height: 150)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .shadow(color: .gray, radius: 5)
+                                    Text("BTS")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150, height: 75)
                                         .background(.white)
-                                        .cornerRadius(21)
-                                        .offset(y: 49)
-                                        .foregroundColor(.black)
-                                    
+                                        .cornerRadius(10)
+                                        .offset(y: 63)
                                 }
+                                .foregroundColor(.black)
                             }
                         }
                     }
                 }
             }
+            .navigationTitle("Hi, \(username)!")
             .sheet(isPresented: $showEditKopCard) {
                 EditKopCard(EditKopCard: $showEditKopCard, imageSelected: $imageSelected, name: $name, username: $username, Bio: $Bio)}
             .sheet(isPresented: $showExchangePoint) {

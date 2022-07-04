@@ -20,7 +20,28 @@ import SwiftUI
 //    OnBoardingStep(image: "Image4", title: "Points", description: "Get your points to improve your fancard!"),
 //    OnBoardingStep(image: "Image5", title: "Community", description: "Increase your experience when attend Kpop events!"),
 //]
+struct EventCard {
+    var image: String
+    var teks: String
+}
 
+private let eventCard = [
+    EventCard(image: "event1", teks: """
+                   THE BOYZ WORLD
+                     July 9, 2022
+                Tennis Indoor Stadium
+                """),
+    EventCard(image: "event2", teks: """
+                  EPIK HIGH IS HERE
+                    July 16, 2022
+                The Kasablanka Hall
+                """),
+    EventCard(image: "event3", teks: """
+                (G)I-DLE WORLD TOUR [JUST ME ( )I-DLE]
+                          August 27, 2022
+                       The Kasablanka Hall
+                """)
+]
 struct DashboardUtama: View {
     
     @Binding var showDashboard: Bool
@@ -30,6 +51,7 @@ struct DashboardUtama: View {
     @State private var password: String = ""
     @State var showEvent: Bool = false
     @State var username: String = ""
+    
 //    private let screenWidth = UIScreen.main.bounds.size.width
 //    private let screenHeight = UIScreen.main.bounds.size.height
     var body: some View {
@@ -86,7 +108,10 @@ struct DashboardUtama: View {
                     .frame(width: 90, height: 110)
                     .offset(x: 105, y: 15)
                 
-                Text("Scan and connect!")
+                Text("""
+                     Scan and
+                     onnect!
+                     """)
                     .bold()
                     .foregroundColor(Color.white)
                 //.font(Font.custom("Krungthep", size: 18))
@@ -123,27 +148,27 @@ struct DashboardUtama: View {
                     
                 }.offset(x: 110, y: -85)
                 
-                Image("chanyeol")
+                Image("aecute")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 47, height: 47)
                     .offset(x: -110, y: -25)
                 
-                Text("Chacaa")
+                Text("aecute")
                     .font(.system(size: 20)).bold()
-                    .offset(x: -28, y: -35)
+                    .offset(x: -29, y: -35)
                 
                 Text("3000 Points")
                     .font(.system(size: 15))
                     .offset(x: -20, y: -15)
                 
-                Image("renjun")
+                Image("naeyon")
                     .resizable()
                     .frame(width: 50, height: 50)
                     .offset(x: -110, y: 70)
                 
-                Text("Rerere")
+                Text("twnayeon")
                     .font(.system(size: 20)).bold()
-                    .offset(x: -30, y: 60)
+                    .offset(x: -16, y: 60)
                 
                 Text("2800 Points")
                     .font(.system(size: 15))
@@ -162,37 +187,71 @@ struct DashboardUtama: View {
                 }.offset(x: 110,y: 10)
                 
             }
-            
             ScrollView(.horizontal) {
-                HStack(spacing: -30) {
-                    ForEach(0..<5) {_ in
-                        
-                        ZStack{
-                            Image("ScrollViewEvents")
-                                .resizable()
-                                .frame(width: 140, height: 160)
-                                .padding(.leading, 26)
-                                .offset(y: 10)
-                            
-                            Text("""
-                            NCT 127 Comeback
-                                  4 June 2022
-                            Coffe Shop Menteng
-                            """).offset(x: 12, y: 55)
-                                .font(.system(size: 10).bold())
-                            Image("NCTback")
-                                .resizable()
-                                .frame(width: 118, height: 94)
-                                .offset(x: 13, y: -12)
-                                .padding()
+                HStack(spacing: -20){
+                    ForEach(0..<eventCard.count,id:\.self) { it in
+                            Button {
                                 
+                            } label: {
+                                ZStack {
+                                    Image(eventCard[it].image)
+                                        .resizable()
+                                        .frame(width: 150, height: 150)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .shadow(color: .gray, radius: 5)
+                                    Text(eventCard[it].teks).font(.system(size: 12))
+                                        .fontWeight(.bold)
+                                        .frame(width: 150, height: 50)
+                                        .background(.white)
+                                        .cornerRadius(10)
+                                        .offset(y: 63)
+                                        
+                                }
+                                .foregroundColor(.black)
+                            }
+                            //                                    RoundedRectangle(cornerRadius: 10)
+                            //                                        .fill(.gray)
+                            //                                        .frame(width: 150, height: 200)
+                            //                                        .shadow(color: .gray, radius: 5)
                             
+                            .padding()
                             
-                        }
+                        
                     }
-                    
                 }
+                
             }
+            
+//            ScrollView(.horizontal) {
+//                HStack(spacing: -30) {
+//                    ForEach(0..<5) {_ in
+//                        
+//                        ZStack{
+//                            Image("ScrollViewEvents")
+//                                .resizable()
+//                                .frame(width: 140, height: 160)
+//                                .padding(.leading, 26)
+//                                .offset(y: 10)
+//                            
+//                            Text("""
+//                            NCT 127 Comeback
+//                                  4 June 2022
+//                            Coffe Shop Menteng
+//                            """).offset(x: 12, y: 55)
+//                                .font(.system(size: 10).bold())
+//                            Image("NCTback")
+//                                .resizable()
+//                                .frame(width: 118, height: 94)
+//                                .offset(x: 13, y: -12)
+//                                .padding()
+//                                
+//                            
+//                            
+//                        }
+//                    }
+//                    
+//                }
+//            }
             
             
             Spacer()
@@ -291,11 +350,13 @@ struct Warna {
 //
 //
 //
-//struct DashboardUtama_Previews:
-//    PreviewProvider {
-//    @State static var showDashboard: Bool = false
-//    static var previews: some View {
-//        DashboardUtama(showDashboard: $showDashboard)
-//    }
-//}
+
+
+struct DashboardUtama_Previews:
+    PreviewProvider {
+    @State static var showDashboard: Bool = false
+    static var previews: some View {
+        DashboardUtama(showDashboard: $showDashboard)
+    }
+}
 //

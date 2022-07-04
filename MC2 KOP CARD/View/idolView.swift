@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+struct IdolPage {
+    @State var idolPict: String
+    @State var nameIdol: String
+}
+
+private let idolPage = [
+    IdolPage(idolPict: "bts", nameIdol: "BTS"),
+    IdolPage(idolPict: "exo", nameIdol: "EXO"),
+    IdolPage(idolPict: "itzy", nameIdol: "ITZY"),
+    IdolPage(idolPict: "ive", nameIdol: "IVE"),
+    IdolPage(idolPict: "nct", nameIdol: "NCT"),
+    IdolPage(idolPict: "seventeen", nameIdol: "SEVENTEEN"),
+    IdolPage(idolPict: "snsd", nameIdol: "SNSD"),
+    IdolPage(idolPict: "twice", nameIdol: "TWICE")
+]
 struct idolView: View {
     @Binding var showidolView: Bool
     
@@ -15,129 +30,84 @@ struct idolView: View {
             ZStack{
                 Color("BGColor")
                     .ignoresSafeArea()
-                ScrollView{
-                    VStack{
-                        HStack{
-                            Spacer()
-                                .frame(width: 20)
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("GPurple"))
-                                    .frame(width: 152, height: 163)
-                                    .shadow(color: .gray
-                                            , radius: 1, x: 2, y: 0)
-                                Image("bts")
-                                    .resizable()
-                                    .frame(width: 150, height: 160, alignment: .top)
-                                    .cornerRadius(25)
-                                Text("**BTS**")
-                                    .font(.system(size: 14))
-                                    .frame(width: 152, height: 65)
-                                    .background(.white)
-                                    .cornerRadius(21)
-                                    .offset(y: 49)
+                ScrollView {
+                    VStack(spacing: 10){
+                        ForEach(idolPage.indices, id:\.self) { it in
+                            HStack {
+                                Button {
+                                    
+                                } label: {
+                                    ZStack {
+                                        Image(idolPage[it].idolPict)
+                                            .resizable()
+                                            .frame(width: 350, height: 150)
+                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                                            .shadow(color: .gray, radius: 5)
+                                        Text(idolPage[it].nameIdol)
+                                            .fontWeight(.bold)
+                                            .frame(width: 350, height: 50)
+                                            .background(.white)
+                                            .cornerRadius(10)
+                                            .offset(y: 63)
+                                    }
                                     .foregroundColor(.black)
+                                }
+                                //                                    RoundedRectangle(cornerRadius: 10)
+                                //                                        .fill(.gray)
+                                //                                        .frame(width: 150, height: 200)
+                                //                                        .shadow(color: .gray, radius: 5)
+                                
+                                .padding()
+//                                Button {
+//
+//                                } label: {
+//                                    ZStack {
+//                                        Image(idolPage[it].idolPict)
+//                                            .resizable()
+//                                            .frame(width: 150, height: 150)
+//                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+//                                            .shadow(color: .gray, radius: 5)
+//                                        Text(idolPage[it].nameIdol)
+//                                            .fontWeight(.bold)
+//                                            .frame(width: 150, height: 75)
+//                                            .background(.white)
+//                                            .cornerRadius(10)
+//                                            .offset(y: 63)
+//                                    }
+//                                    .foregroundColor(.black)
+//                                }
+//                                .padding()
                             }
-                            Spacer()
-                                .frame(width: 20)
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("GPurple"))
-                                    .frame(width: 152, height: 163)
-                                    .shadow(color: .gray
-                                            , radius: 1, x: 2, y: 0)
-                                Image("exo")
-                                    .resizable()
-                                    .frame(width: 150, height: 160, alignment: .top)
-                                    .cornerRadius(25)
-                                Text("**EXO**")
-                                    .font(.system(size: 14))
-                                    .frame(width: 152, height: 65)
-                                    .background(.white)
-                                    .cornerRadius(21)
-                                    .offset(y: 49)
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
-                                .frame(width: 20)
                         }
-                        Spacer()
-                            .frame(height: 30)
-                        HStack{
-                            Spacer()
-                                .frame(width: 20)
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("GPurple"))
-                                    .frame(width: 152, height: 163)
-                                    .shadow(color: .gray
-                                            , radius: 1, x: 2, y: 0)
-                                Image("SJ")
-                                    .resizable()
-                                    .frame(width: 150, height: 160, alignment: .top)
-                                    .cornerRadius(25)
-                                Text("**SUPER JUNIOR**")
-                                    .font(.system(size: 14))
-                                    .frame(width: 152, height: 65)
-                                    .background(.white)
-                                    .cornerRadius(21)
-                                    .offset(y: 49)
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
-                                .frame(width: 20)
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("GPurple"))
-                                    .frame(width: 152, height: 163)
-                                    .shadow(color: .gray
-                                            , radius: 1, x: 2, y: 0)
-                                Image("nctdream")
-                                    .resizable()
-                                    .frame(width: 150, height: 160, alignment: .top)
-                                    .cornerRadius(25)
-                                Text("**NCT DREAM**")
-                                    .font(.system(size: 14))
-                                    .frame(width: 152, height: 65)
-                                    .background(.white)
-                                    .cornerRadius(21)
-                                    .offset(y: 49)
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
-                                .frame(width: 20)
-                        }
-                        Spacer()
-                            .frame(height: 30)
-                        HStack{
-                            Spacer()
-                                .frame(width: 20)
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                    .fill(Color("GPurple"))
-                                    .frame(width: 152, height: 163)
-                                    .shadow(color: .gray
-                                            , radius: 1, x: 2, y: 0)
-                                Image("seventeen")
-                                    .resizable()
-                                    .frame(width: 150, height: 160, alignment: .top)
-                                    .cornerRadius(25)
-                                Text("**SEVENTEEN**")
-                                    .font(.system(size: 14))
-                                    .frame(width: 152, height: 65)
-                                    .background(.white)
-                                    .cornerRadius(21)
-                                    .offset(y: 49)
-                                    .foregroundColor(.black)
-                            }
-                            Spacer()
-                                .frame(width: 195)
-                        }
+                    }
+                    
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        // cancel button
+                        showidolView.toggle()
+                        
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.red)
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        // save button
+                        showidolView.toggle()
+                        
+                    } label: {
+                        Text("Save")
+                            .foregroundColor(.blue)
                     }
                 }
             }
-            .navigationTitle("Idol")
+            .navigationTitle("Add New Idol")
         }
+        
     }
 }
 

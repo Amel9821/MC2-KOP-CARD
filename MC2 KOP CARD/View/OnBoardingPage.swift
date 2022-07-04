@@ -77,7 +77,7 @@ struct OnBoardingPage: View {
                         VStack{
                             Image(onBoardingSteps[it].image)
                                 .resizable()
-                                .frame(width: 250, height: 250)
+                                .frame(width: 220, height: 200)
                             
                             Text(onBoardingSteps[it].title)
                                 .font(.title)
@@ -107,7 +107,8 @@ struct OnBoardingPage: View {
                         }
                     }
                 }
-                .padding(.bottom, 24)
+                .padding(.bottom, 60)
+             //   .offset(x: 0, y: -70)
                 Button(action:{
                     if self.currentStep < onBoardingSteps.count - 1 {
                         self.currentStep += 1
@@ -133,6 +134,7 @@ struct OnBoardingPage: View {
                         .cornerRadius(16)
                         .padding(.horizontal, 16)
                         .foregroundColor(.purple)
+                       // .offset(x:0, y:-60)
                 
                 .buttonStyle(PlainButtonStyle())
             }

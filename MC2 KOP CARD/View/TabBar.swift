@@ -20,7 +20,7 @@ struct TabBar: View {
     var body: some View {
         TabView{
             if username != "" {
-                DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username)
+                DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username, imageSelected: $imageSelected)
                     .tabItem{
                         Image(systemName: "house")
                         Text("Home")

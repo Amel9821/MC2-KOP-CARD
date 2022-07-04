@@ -6,6 +6,28 @@
 
 import SwiftUI
 
+struct EventCard1 {
+    var image1: String
+    var teks1: String
+}
+
+private let eventCard1 = [
+    EventCard1(image1: "event1", teks1: """
+                   THE BOYZ WORLD
+                     July 9, 2022
+                Tennis Indoor Stadium
+                """),
+    EventCard1(image1: "event2", teks1: """
+                  EPIK HIGH IS HERE
+                    July 16, 2022
+                The Kasablanka Hall
+                """),
+    EventCard1(image1: "event3", teks1: """
+                (G)I-DLE WORLD TOUR [JUST ME ( )I-DLE]
+                          August 27, 2022
+                       The Kasablanka Hall
+                """)
+]
 struct DashboardAfterLogin: View {
     
     @State var showEvent: Bool = false
@@ -15,24 +37,26 @@ struct DashboardAfterLogin: View {
     @State var showActivity: Bool = false
     @Binding var username: String
     @State var showTopPoints = false
+    @Binding var imageSelected: UIImage
     
     var body: some View {
 
         VStack{
 
             HStack{
-                Image(systemName: "person")
+                Image(uiImage: imageSelected)
                                        .resizable()
                                        .frame(width: 30, height: 30)
                                        .padding(.leading,35)
                                       .offset(y: 3)
+                                      .clipShape(RoundedRectangle(cornerRadius: 10))
                
                                                    VStack{
                                                    Text(username)
                                                            .font(.system(size: 20)).bold()
                                                            .offset(x: -10, y:3)
                
-                                                   Text("150 Points")
+                                                   Text("1,000 Points")
                                                            .font(.system(size: 15))
                                                            .offset(y: 0)
                                }
@@ -145,31 +169,31 @@ struct DashboardAfterLogin: View {
 
                 }.offset(x: 110, y: -100)
 
-                Image("chanyeol")
+                Image("aecute")
                     .resizable()
                     .frame(width: 47, height: 47)
                     .offset(x: -110, y: -25)
                 
 
-                Text("Chacaa")
+                Text("aecute")
                     .font(.system(size: 20)).bold()
-                    .offset(x: -26, y: -40)
+                    .offset(x: -29, y: -40)
 
                 Text("3000 Points")
                     .font(.system(size: 15))
                     .offset(x: -20, y: -10)
 
-                Image("renjun")
+                Image("naeyon")
                     .resizable()
                     .frame(width: 47, height: 47)
-                    .offset(x: -110, y: 60)
+                    .offset(x: -110, y: 65)
                    // .clipShape(Circle())
 
-                Text("Rerere")
+                Text("twnayeon")
                     .font(.system(size: 20)).bold()
-                    .offset(x: -30, y: 53)
+                    .offset(x: -16, y: 53)
 
-                Text("2800 Points")
+                Text("3000 Points")
                     .font(.system(size: 15))
                     .offset(x: -19, y: 80)
                 //Spacer()
@@ -188,36 +212,69 @@ struct DashboardAfterLogin: View {
                     
             }.offset(x: 100,y: -10)
                 
-            
-
             ScrollView(.horizontal) {
                 HStack(spacing: -20) {
-                    ForEach(0..<5) {_ in
-                        
-                        ZStack{
-                        Image("ScrollViewEvents")
-                            .resizable()
-                            .frame(width: 160, height: 160)
-                            .padding(.leading, 26)
-                            .offset(y: -10)
+                    ForEach(0..<eventCard1.count,id:\.self) { it in
+                            Button {
+                                
+                            } label: {
+                                ZStack {
+                                    Image(eventCard1[it].image1)
+                                        .resizable()
+                                        .frame(width: 150, height: 150)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .shadow(color: .gray, radius: 5)
+                                    Text(eventCard1[it].teks1).font(.system(size: 12))
+                                        .fontWeight(.bold)
+                                        .frame(width: 150, height: 50)
+                                        .background(.white)
+                                        .cornerRadius(10)
+                                        .offset(y: 63)
+                                        
+                                }
+                                .foregroundColor(.black)
+                            }
+                            //                                    RoundedRectangle(cornerRadius: 10)
+                            //                                        .fill(.gray)
+                            //                                        .frame(width: 150, height: 200)
+                            //                                        .shadow(color: .gray, radius: 5)
                             
-                            Text("""
-                            NCT 127 Comeback
-                                 4 June 2022
-                            Coffe Shop Menteng
-                            """).offset(x: 15, y: 35)
-                                .font(.system(size: 10).bold())
-                            Image("NCTback")
-                                .resizable()
-                                .frame(width: 135, height: 95)
-                                .offset(x: 13, y: -30)
-                                .padding()
-                              
-                        }
+                            .padding()
+                            
+                        
                     }
-
                 }
+                
             }
+
+//            ScrollView(.horizontal) {
+//                HStack(spacing: -20) {
+//                    ForEach(0..<5) {_ in
+//
+//                        ZStack{
+//                        Image("ScrollViewEvents")
+//                            .resizable()
+//                            .frame(width: 160, height: 160)
+//                            .padding(.leading, 26)
+//                            .offset(y: -10)
+//
+//                            Text("""
+//                            NCT 127 Comeback
+//                                 4 June 2022
+//                            Coffe Shop Menteng
+//                            """).offset(x: 15, y: 35)
+//                                .font(.system(size: 10).bold())
+//                            Image("NCTback")
+//                                .resizable()
+//                                .frame(width: 135, height: 95)
+//                                .offset(x: 13, y: -30)
+//                                .padding()
+//
+//                        }
+//                    }
+//
+//                }
+//            }
 //             .background(WarnaAfter.myColor2After)
 //            Spacer()
 //             .foregroundColor(WarnaAfter.myColor2After)
@@ -303,10 +360,11 @@ struct DashboardAfterLogin_Previews: PreviewProvider {
 //    
     @State static var username: String = ""
     @State static var showDashboardAfterLogin: Bool = false
+    @State static var imageSelected = UIImage()
 //    @State static var name: String = ""
 //    @State static var Bio: String = ""
         static var previews: some View {
-            DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username)
+            DashboardAfterLogin(showDashboardAfterLogin: $showDashboardAfterLogin, username: $username, imageSelected: $imageSelected)
         }
     }
 

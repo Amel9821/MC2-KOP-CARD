@@ -125,6 +125,28 @@ struct EditKopCard: View {
             .navigationTitle("Edit profile")
             .navigationBarTitleDisplayMode(.inline)
             //bikin button save
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        // cancel button
+                        EditKopCard.toggle()
+                        
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.red)
+                    }
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        // cancel button
+                        EditKopCard.toggle()
+                        
+                    } label: {
+                        Text("Save")
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
         }
     }
 }

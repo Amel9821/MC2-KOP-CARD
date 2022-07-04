@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+//struct TukerPoin {
+//    var sosmed: String
+//    var desc: String
+//}
+//
+//private let tukerPoin = [
+//    TukerPoin(sosmed: """, desc: """)
+//]
 struct exchangePointView: View {
     @Binding var showExchangePoint: Bool
     
@@ -132,6 +140,18 @@ struct exchangePointView: View {
                 }
             }
             .navigationTitle("Exchange Point")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        // cancel button
+                        showExchangePoint.toggle()
+                        
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.red)
+                    }
+                    }
+                }
         }
     }
 }
