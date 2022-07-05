@@ -14,7 +14,7 @@ struct Activity: View {
     var body: some View {
         NavigationView{
             List{
-                Text("Yesterday")
+                Text("Today")
                     .foregroundColor(.black)
                     .font(.system(size: 22, weight: .bold, design: .default))
                     .listRowSeparator(.hidden)
@@ -22,7 +22,7 @@ struct Activity: View {
                     Image("profileP")
                         .resizable()
                         .frame(width: 50, height: 50)
-                    Text("**yourfriend** connected with you at Renjun Birthday’s Event.")
+                    Text("**aecute** connected with you at Renjun Birthday’s Event.")
                         .font(.system(size: 17))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -92,8 +92,9 @@ struct Activity: View {
     }
 }
 
-//struct Activity_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Activity()
-//    }
-//}
+struct Activity_Previews: PreviewProvider {
+    @State static var showActivity = false
+    static var previews: some View {
+        Activity(showActivity: $showActivity)
+    }
+}

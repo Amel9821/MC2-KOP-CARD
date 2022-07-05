@@ -72,6 +72,8 @@ struct EditKopCard: View {
                                 //.accentColor(.yellow)
                                 .foregroundColor(Color("DPurple"))
                                 .padding(.leading, 25)
+                                .disableAutocorrection(true)
+                                .autocapitalization(.none)
                         }
                         HStack {
                             Text("Bio")

@@ -10,6 +10,7 @@
 		431E2660286D7C4300C15518 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E265F286D7C4300C15518 /* QRGeneratorView.swift */; };
 		431E2662286DCEF000C15518 /* LoginViewHaveAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */; };
 		433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433F09DE286EA4BB009BDA4E /* CardView.swift */; };
+		434BAC092873E85D00DAADE4 /* ProfilFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434BAC082873E85D00DAADE4 /* ProfilFriend.swift */; };
 		43759D5F2868C20400A96F98 /* Krungthep.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43759D5E2868C20400A96F98 /* Krungthep.ttf */; };
 		437A9D9328703BF2006BD96F /* exchangePointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9228703BF2006BD96F /* exchangePointView.swift */; };
 		437A9D9528703C15006BD96F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437A9D9428703C15006BD96F /* Activity.swift */; };
@@ -43,6 +44,7 @@
 		431E265F286D7C4300C15518 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		431E2661286DCEF000C15518 /* LoginViewHaveAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewHaveAccount.swift; sourceTree = "<group>"; };
 		433F09DE286EA4BB009BDA4E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		434BAC082873E85D00DAADE4 /* ProfilFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilFriend.swift; sourceTree = "<group>"; };
 		43759D5E2868C20400A96F98 /* Krungthep.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Krungthep.ttf; sourceTree = "<group>"; };
 		43759D602868C53A00A96F98 /* MC2-KOP-CARD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MC2-KOP-CARD-Info.plist"; sourceTree = SOURCE_ROOT; };
 		437A9D9228703BF2006BD96F /* exchangePointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exchangePointView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				437A9D9428703C15006BD96F /* Activity.swift */,
 				437A9D9E28703C47006BD96F /* ProfileCardLogin.swift */,
 				437A9D9C28703C40006BD96F /* ProfileCard.swift */,
+				434BAC082873E85D00DAADE4 /* ProfilFriend.swift */,
 				437A9D9A28703C38006BD96F /* idolView.swift */,
 				437A9D9628703C1C006BD96F /* EventView.swift */,
 				433F09DE286EA4BB009BDA4E /* CardView.swift */,
@@ -269,6 +272,7 @@
 				437A9DAF287154C9006BD96F /* EditKopCard.swift in Sources */,
 				43E436242871DAE800DF1618 /* PreviewPicker.swift in Sources */,
 				43E4362E2872287600DF1618 /* TopPoints.swift in Sources */,
+				434BAC092873E85D00DAADE4 /* ProfilFriend.swift in Sources */,
 				433F09DF286EA4BB009BDA4E /* CardView.swift in Sources */,
 				437A9DAD2871511F006BD96F /* DashboardAfterLogin.swift in Sources */,
 				43CDB38228680B7400C07599 /* MC2_KOP_CARDApp.swift in Sources */,
