@@ -1,0 +1,3 @@
+# MC2-KOP-CARD
+This project is for completing the challenge in Apple Developer Academy. This is An app for KPOP fans who want to build a positive bond with fellow fans through mutual idol and social media IDs. KOPCard was developed by a team of 5 people from different backgrounds.  In fact we didn't have any IT background prior this project. This project was created because we have an interest in K-pop. In order to join Korean wave that is occurring in Indonesia. Based on our desktop research and interviews. We found that being a Kpop fan can increase our happiness and all either. This app can help kpop fans to connect with each other.
+
